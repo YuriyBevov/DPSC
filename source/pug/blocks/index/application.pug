@@ -1,1 +1,13 @@
-h2 Бланк извещения о ДТП 2021
+section.application.cmn
+  .cmn__wrapper.application__wrapper
+    h2.cmn__title.application__title Бланк извещения о ДТП 2021
+        
+    picture
+      source(type="image/webp" srcset='./assets/img/blank@1x.webp 1x, ./assets/img/blank@2x.webp 2x')       
+      img(src='./assets/img/blank@1x.jpg' srcset='./assets/img/blank@2x.jpg 2x' alt='бланк извещения о ДТП')
+    
+    p.cmn__text.application__desc Отправим бланк на Email
+    
+    form.application__form
+      input(type="mail" placeholder="Email")
+      button(type="submit") Получить европротокол 

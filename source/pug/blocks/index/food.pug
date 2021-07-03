@@ -1,1 +1,15 @@
-h2 Заправил машину? Заправься сам!
+section.food.cmn
+  .cmn__wrapper.food__wrapper
+    h2.cmn__title.food__title Заправил машину? Заправься сам!
+    ul.food__list
+      -
+        const food_card = [
+          {title: 'ОП!', url: './assets/img/food1'},
+          {title: 'DRAM', url: './assets/img/food2'},
+          {title: 'Еда и точка', url: './assets/img/food3'},
+          {title: 'Соль и перец', url: './assets/img/food4'},
+        ];
+      each card in food_card
+        li.food__card
+          img(src=card.url + '@1x.png' srcset=card.url + '@2x.png 2x' alt=card.title)
+    a(href="#").food__link Меню всех питстопов 

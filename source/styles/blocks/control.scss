@@ -1,0 +1,91 @@
+.control {
+    &__title {
+        margin-bottom: 1.8rem;
+    }
+
+    &__item {
+        // position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 1.4rem;
+        padding-top: 1.8rem;
+        // padding-left: 4.9rem;
+        margin-bottom: 1.2rem;
+
+        border: 1px solid #EDF1F8;
+        border-radius: 8px;
+
+        &--bcg-blue {
+            border: 1px solid #152086;
+            background-color: $color-blue;
+        }
+
+        &--bcg-yellow {
+            border: 1px solid #E2F56D;
+            background-color: $color-yellow;
+        }
+
+        /* &--insta:before,
+        &--tg:before, 
+        &--staple:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+
+            background-repeat: no-repeat;
+
+        }
+
+        &--insta:before {
+            &-black {
+                fill: black;
+            }
+            width: 2.3rem;
+            height: 2.3rem;
+            background-image: url("../assets/img/icon-insta.svg");
+        }
+
+        &--tg:before {
+            width: 2.2rem;
+            height: 2.6rem;
+            background-image: url("../assets/img/icon-tg.svg");
+        }
+
+        &--staple:before {
+            width: 2rem;
+            height: 2rem;
+            background-image: url("../assets/img/icon-staple.svg");
+        } */
+    }
+
+    &__link {
+        font-size: 1.7rem;
+        line-height: 2rem;
+        margin-left: auto;
+
+        color: $color-white;
+
+        &--col-black {
+            color: $color-black;
+        }
+
+        &--col-blue {
+            color: $color-blue;
+        }
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-black;
+        margin-bottom: 1.5rem;
+
+        a {
+            font-size: 18px;
+            line-height: 21px;
+            color: $color-black;
+            text-decoration: underline;
+        }
+    }
+}

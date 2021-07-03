@@ -1,0 +1,43 @@
+.application {
+    &__title {
+        margin-bottom: 2.1rem;
+    }
+
+    picture {
+        margin-bottom: 2.2rem;
+        //max-width: 35rem;
+    }
+
+    &__desc {
+        margin-bottom: 1.5rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            padding: 1.6rem 2.2rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ECEFF6;
+            border-radius: 8px;
+            color: $color-black;
+        }
+
+        button {
+            font-size: 1.7rem;
+            line-height: 2rem;
+            text-align: center;
+
+            color: #000000;
+            padding: 1.6rem 2.2rem;
+            background: #ECEFF6;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 3.4rem;
+        }
+    }
+}

@@ -8,11 +8,19 @@
         font-weight: 600;
         font-size: 2rem;
         line-height: 2.4rem;
+
+        &--white {
+            color: $color-white;
+        }
     }
 
     &__text {
         font-size: 1.7rem;
         line-height: 2rem;
+
+        &--white {
+            color: $color-white;
+        }
     }
 
     &__phoneBtn {

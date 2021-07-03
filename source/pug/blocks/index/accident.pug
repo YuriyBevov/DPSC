@@ -1,1 +1,20 @@
-h2 На случай ДТП
+section.accident.cmn
+  .cmn__wrapper.accident__wrapper
+    .accident__header
+      h2.cmn__title.accident__title На случай ДТП
+      a(href="#").accident__link Дежурная часть
+
+    ul.accident__list
+      -
+        const banks = [
+          {title: 'АльфаСтрахование', url: './assets/img/bank1'},
+          {title: 'Страховой Дом ВСК', url: './assets/img/bank2'},
+          {title: 'Росгосстрах', url: './assets/img/bank3'}
+        ];
+      each bank in banks
+        li.accident__card
+          img(src=bank.url + '@1x.png' srcset=bank.url + '@2x.png 2x' alt=bank.title)
+          h3= bank.title
+          include ../../components/phoneBtn.pug
+
+    btn(type="button").accident__btn Еще 9 страховщиков

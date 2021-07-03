@@ -1,8 +1,7 @@
 @mixin container() {
     margin: 0 auto;
     width: 100%;
-    max-width: 768px;
+    max-width: 534px;
     min-width: 320px;
-    padding: 0 20px;
-    outline: 1px solid red;
+    padding: 1rem 2rem;
 }

@@ -1,0 +1,54 @@
+.service {
+    background: #1F2126;
+    border-radius: 10px;
+    margin-bottom: 4.4rem;
+
+    &__wrapper {
+        padding: 3.5rem;
+    }
+
+    &__header {
+        position: relative;
+        padding-right: 7rem;
+        border-bottom: 1px solid #353941;
+    }
+
+    &__more {
+        position: absolute;
+
+        top: 0; 
+        right: 0;
+
+        content: '';
+        width: 5.7rem;
+        height: 5.7rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        background-image: url("../assets/img/icon-arr-big.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    &__title {
+        margin-bottom: 1.6rem;
+    }
+
+    &__desc {
+        margin-bottom: 3.2rem;
+    }
+
+    &__btn {
+        width: 100%;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+
+        padding: 1.5rem 0.5rem;
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid $color-white;
+        border-radius: 8px;
+
+        color: $color-white;
+    }
+}

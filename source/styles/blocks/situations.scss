@@ -1,0 +1,36 @@
+.situations {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+    }
+
+    &__desc {
+        margin-bottom: 2.1rem;
+    }
+
+    &__slider {
+        margin-bottom: 1.4rem;
+    }
+
+    &__btn {
+        padding: 1.5rem 4rem;
+        margin-bottom: 2.5rem;
+        background: $color-blue;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 40rem;
+        border: none;
+        margin: 0 auto;
+
+        span {
+            font-size: 1.7rem;
+            line-height: 2rem;
+
+            color: $color-white;
+        }
+    }
+}

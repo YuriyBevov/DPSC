@@ -120,7 +120,7 @@
             <li class="assistance__card">
               <div class="assistance__card-avatar"> 
                 <picture>
-                  <source type="image/webp" srcset="./assets/img/card8@1x.webp 1x, ../assets/img/card8@2x.webp 2x"><img src="./assets/mg/card8@1x.jpg" srcset="./assets/img/card8@2x.jpg 2x" alt="Помыть машину">
+                  <source type="image/webp" srcset="./assets/img/card8@1x.webp 1x, ./assets/img/card8@2x.webp 2x"><img src="./assets/mg/card8@1x.jpg" srcset="./assets/img/card8@2x.jpg 2x" alt="Помыть машину">
                 </picture>
                 <div class="assistance__card-rate"> <span>4.8</span></div>
               </div>
@@ -133,14 +133,93 @@
           </ul>
         </div>
       </section>
-      <h2>Ситуации</h2>
-      <p>Попроси помощь в чате! </p>
-      <h2>Заправил машину? Заправься сам!</h2>
-      <h2>На случай ДТП</h2>
-      <h2>Бланк извещения о ДТП 2021</h2>
-      <h2>Смотреть все услуги</h2>
-      <h2>ДПС-Контроль</h2>
-      <h2>company</h2>
+      <section class="situations cmn">
+        <div class="cmn__wrapper situations__wrapper">
+          <h2 class="cmn__title situations__title">Ситуации</h2>
+          <p class="cmn__text situations__desc">Попроси помощь в чате!</p>
+          <div class="situations__slider">
+            <p>тут будет слайдер</p>
+          </div>
+          <button class="situations__btn" type="button"><span>ДПС-Контроль </span><span>Сегодня</span></button>
+        </div>
+      </section>
+      <section class="food cmn">
+        <div class="cmn__wrapper food__wrapper">
+          <h2 class="cmn__title food__title">Заправил машину? Заправься сам!</h2>
+          <ul class="food__list">
+            <li class="food__card"><img src="./assets/img/food1@1x.png" srcset="./assets/img/food1@2x.png 2x" alt="ОП!"></li>
+            <li class="food__card"><img src="./assets/img/food2@1x.png" srcset="./assets/img/food2@2x.png 2x" alt="DRAM"></li>
+            <li class="food__card"><img src="./assets/img/food3@1x.png" srcset="./assets/img/food3@2x.png 2x" alt="Еда и точка"></li>
+            <li class="food__card"><img src="./assets/img/food4@1x.png" srcset="./assets/img/food4@2x.png 2x" alt="Соль и перец"></li>
+          </ul><a class="food__link" href="#">Меню всех питстопов </a>
+        </div>
+      </section>
+      <section class="accident cmn">
+        <div class="cmn__wrapper accident__wrapper">
+          <div class="accident__header">
+            <h2 class="cmn__title accident__title">На случай ДТП</h2><a class="accident__link" href="#">Дежурная часть</a>
+          </div>
+          <ul class="accident__list">
+            <li class="accident__card"><img src="./assets/img/bank1@1x.png" srcset="./assets/img/bank1@2x.png 2x" alt="АльфаСтрахование">
+              <h3>АльфаСтрахование</h3><a class="cmn__phoneBtn" href="#">Вызов</a>
+            </li>
+            <li class="accident__card"><img src="./assets/img/bank2@1x.png" srcset="./assets/img/bank2@2x.png 2x" alt="Страховой Дом ВСК">
+              <h3>Страховой Дом ВСК</h3><a class="cmn__phoneBtn" href="#">Вызов</a>
+            </li>
+            <li class="accident__card"><img src="./assets/img/bank3@1x.png" srcset="./assets/img/bank3@2x.png 2x" alt="Росгосстрах">
+              <h3>Росгосстрах</h3><a class="cmn__phoneBtn" href="#">Вызов</a>
+            </li>
+          </ul>
+          <btn class="accident__btn" type="button">Еще 9 страховщиков</btn>
+        </div>
+      </section>
+      <section class="application cmn">
+        <div class="cmn__wrapper application__wrapper">
+          <h2 class="cmn__title application__title">Бланк извещения о ДТП 2021</h2>
+          <picture>
+            <source type="image/webp" srcset="./assets/img/blank@1x.webp 1x, ./assets/img/blank@2x.webp 2x"><img src="./assets/img/blank@1x.jpg" srcset="./assets/img/blank@2x.jpg 2x" alt="бланк извещения о ДТП">
+          </picture>
+          <p class="cmn__text application__desc">Отправим бланк на Email</p>
+          <form class="application__form">
+            <input type="mail" placeholder="Email">
+            <button type="submit">Получить европротокол </button>
+          </form>
+        </div>
+      </section>
+      <section class="service cmn">
+        <div class="cmn__wrapper service__wrapper">
+          <div class="service__header">
+            <h2 class="cmn__title cmn__title--white service__title">Смотреть все услуги</h2>
+            <p class="cmn__text cmn__text--white service__desc">Каталог компаний, которые оказывают сервисы для автолюбителей. </p><a class="service__more" href="#" aria-label="смотреть все услуги"> </a>
+          </div>
+          <button class="service__btn" type="button">Хочу добавить свою компанию</button>
+        </div>
+      </section>
+      <section class="control cmn">
+        <div class="cmn__wrapper control__wrapper">
+          <h2 class="cmn__title control__title">ДПС-Контроль</h2>
+          <ul class="control__list"> 
+            <li class="control__item control__item--bcg-blue control__item--insta">
+              <p class="cmn__text cmn__text--white control__desc"><b>dps.control</b> — новости и события, дороги и водители, социальные темы и польза</p><a class="control__link" href="#">Подписаться</a>
+            </li>
+            <li class="control__item control__item--bcg-yellow control__item--insta">
+              <p class="cmn__text control__desc"><b>dpscontroltoday</b> — ежедневные ситуации на дороге: фото аварий, сводки, разборы </p><a class="control__link control__link--col-black" href="#">Подписаться</a>
+            </li>
+            <li class="control__item control__item--tg">
+              <p class="cmn__text control__desc"><b>Группа ДПС-Контроль Сегодня</b> — крупнейший чат с информацией о постах ДПС, оперативная информация с дороги </p><a class="control__link control__link--col-blue" href="#">Подписаться</a>
+            </li>
+            <li class="control__item control__staple">
+              <p class="cmn__text control__desc"><a href="www.dpscontrol.ru"> <b>www.dpscontrol.ru</b> </a> — подборка услуг и сервисов для автолюбителей и жителей города </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="company cmn">
+        <div class="cmn__wrapper company__wrapper">
+          <h2 class="cmn__title cmn__title--white company__title">Добавить компанию</h2>
+          <p class="cmn__text cmn__text--white company__desc">Напишите в Telegram, чтобы добавить компанию в подборку сервисов и услуг ДПС-Контроль</p><a class="company__link" href="#">Написать</a>
+        </div>
+      </section>
     </main>
     <div class="footer">
       <h1>footer</h1>

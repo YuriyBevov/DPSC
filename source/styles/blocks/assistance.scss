@@ -11,10 +11,10 @@
     &__card {
         position: relative;
         display: flex;
-        background: #F7F9FE;
+        background: $color-lightgrey;
         padding: 1rem;
         margin-bottom: 1.2rem;
-        border: 1px solid $color-lightgrey;
+        border: 1px solid $color-brd-lightgrey;
         border-radius: 8px;
 
         &-avatar {
@@ -26,6 +26,7 @@
                 width: 4.1rem;
                 height: 4.1rem;
                 margin-bottom: 0.5rem;
+                border-radius: 0.6rem;
             }
         }
 
@@ -72,7 +73,7 @@
                 top: 0;
                 width: 2.8rem; // 4?
                 height: 100%;
-                background: #2C64E5;
+                background: $color-blue;
                 border-radius: 0px 8px 8px 0px;
             }
         }
