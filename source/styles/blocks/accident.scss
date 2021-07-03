@@ -11,6 +11,8 @@
     }
 
     &__link {
+        display: flex;
+        align-items: center;
         font-size: 1.4rem;
         line-height: 1.6rem;
         padding: 1rem;
@@ -18,6 +20,10 @@
         border: 1px solid $color-blue;
         border-radius: 0.8rem;
         color: $color-blue;
+
+        span {
+            margin-right: 0.6rem;
+        }
     }
 
     &__card {

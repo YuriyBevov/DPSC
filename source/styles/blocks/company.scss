@@ -16,8 +16,9 @@
     }
 
     &__link {
-        display: block;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         font-size: 1.6rem;
         line-height: 1.9rem;
@@ -29,5 +30,9 @@
         border-radius: 8px;
 
         color: $color-white;
+
+        svg {
+            margin-right: 1.3rem;
+        }
     }
 }

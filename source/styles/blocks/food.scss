@@ -35,5 +35,14 @@
         height: 4rem;
         color: $color-blue;
         margin-left: auto;
+
+        span {
+            margin-right: 1rem;
+        }
+
+        svg {
+            margin-top: 0.3rem;
+            fill: $color-blue;
+        }
     }
 }

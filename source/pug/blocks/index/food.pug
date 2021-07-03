@@ -12,4 +12,7 @@ section.food.cmn
       each card in food_card
         li.food__card
           img(src=card.url + '@1x.png' srcset=card.url + '@2x.png 2x' alt=card.title)
-    a(href="#").food__link Меню всех питстопов 
+    a(href="#").food__link
+      span Меню всех питстопов 
+      svg(width="10" height="12")
+        use(xlink:href="#icon-arr_long")

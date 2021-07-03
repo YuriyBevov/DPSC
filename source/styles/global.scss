@@ -72,6 +72,10 @@ img {
   object-fit: cover;
 }
 
+svg {
+  fill: $color-white;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

@@ -24,10 +24,17 @@
         height: 5.7rem;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
-        background-image: url("../assets/img/icon-arr-big.svg");
-        background-repeat: no-repeat;
-        background-position: center;
         cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            fill: none;
+            stroke: white;
+            stroke-width: 2px;
+        }
     }
 
     &__title {

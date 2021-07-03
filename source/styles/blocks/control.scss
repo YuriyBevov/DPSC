@@ -4,65 +4,51 @@
     }
 
     &__item {
-        // position: relative;
+        position: relative;
         display: flex;
         flex-direction: column;
         padding: 1.4rem;
+        padding-left: 4.9rem;
         padding-top: 1.8rem;
-        // padding-left: 4.9rem;
         margin-bottom: 1.2rem;
 
         border: 1px solid #EDF1F8;
         border-radius: 8px;
+        background-color: #F7F9FE;;
 
-        &--bcg-blue {
+        svg {
+            position: absolute;
+            top: 2.3rem;
+            left: 1.4rem;
+        }
+
+        &--bcg-violet {
             border: 1px solid #152086;
-            background-color: $color-blue;
+            background-color: $color-violet;
         }
 
         &--bcg-yellow {
             border: 1px solid #E2F56D;
             background-color: $color-yellow;
-        }
 
-        /* &--insta:before,
-        &--tg:before, 
-        &--staple:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '';
-
-            background-repeat: no-repeat;
-
-        }
-
-        &--insta:before {
-            &-black {
-                fill: black;
+            svg {
+                fill: $color-black;
             }
-            width: 2.3rem;
-            height: 2.3rem;
-            background-image: url("../assets/img/icon-insta.svg");
         }
 
-        &--tg:before {
-            width: 2.2rem;
-            height: 2.6rem;
-            background-image: url("../assets/img/icon-tg.svg");
+        &--tg {
+            svg {
+                fill: #51ABEF;;
+            }
         }
-
-        &--staple:before {
-            width: 2rem;
-            height: 2rem;
-            background-image: url("../assets/img/icon-staple.svg");
-        } */
     }
 
     &__link {
+        position: relative;
         font-size: 1.7rem;
         line-height: 2rem;
         margin-left: auto;
+        padding-right: 2rem;
 
         color: $color-white;
 
@@ -73,12 +59,18 @@
         &--col-blue {
             color: $color-blue;
         }
+
+        svg {
+            position: absolute;
+            top: 53%;
+            transform: translateY(-50%);
+            left: calc(100% - 1.4rem);
+        }
     }
 
     &__desc {
         font-size: 18px;
         line-height: 21px;
-        color: $color-black;
         margin-bottom: 1.5rem;
 
         a {

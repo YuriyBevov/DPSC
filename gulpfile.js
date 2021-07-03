@@ -16,6 +16,8 @@ const sourcemap = require("gulp-sourcemaps");
 // PUG
 
 const pug = require("gulp-pug");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
 // Css
 
@@ -54,9 +56,9 @@ const html = () => {
     .pipe(pug({
       pretty: true
     }))
-    /* .pipe(posthtml([
+    .pipe(posthtml([
       include()
-    ])) */
+    ]))
     .pipe(gulp.dest(BUILD_PATH));
 };
 
@@ -127,7 +129,7 @@ const sprite = () => {
   return gulp.src([PATHS.images.spriteSrc])
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename(PATHS.images.spriteFileName))
-    .pipe(gulp.dest(PATHS.images.dest));
+    .pipe(gulp.dest(PATHS.images.spriteDest));
 }
 
 const build = gulp.series(clean, fonts, sprite, html, styles, js, images);

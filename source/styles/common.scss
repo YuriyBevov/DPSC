@@ -24,8 +24,15 @@
     }
 
     &__phoneBtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 1.4rem;
         line-height: 1.6rem;
         color: $color-blue;
+    }
+
+    button {
+        cursor: pointer;
     }
 }
