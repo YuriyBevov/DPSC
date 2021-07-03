@@ -35,4 +35,24 @@
     button {
         cursor: pointer;
     }
+
+    &__serviceBtn {
+        font-size: 17px;
+        line-height: 20px;
+        
+        padding: 1rem 2rem;
+        border: 1px solid #B7BED1;
+        border-radius: 8px;
+        margin-left: auto;
+        color: $color-black;
+
+        span {
+            margin-right: 1rem;
+        }
+    }
+
+    &__logo {
+        width: 7.6rem;
+        height: 3.3rem;
+    }
 }

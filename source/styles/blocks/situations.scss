@@ -1,4 +1,31 @@
 .situations {
+
+    &-swiper-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 1.4rem;
+      
+        .swiper-slide {
+          width: 15rem;
+          min-height: 10.5rem;
+          font-weight: bold;
+          padding: 1rem;
+          box-sizing: border-box;
+          background-color: #EEFEFB;
+          border: 1px solid #E1F2EF;
+          border-radius: 8px;
+
+          svg {
+              position: absolute;
+
+              bottom: 1rem;
+              right: 1rem
+          }
+        }
+      }
+
+
     &__wrapper {
         display: flex;
         flex-direction: column;

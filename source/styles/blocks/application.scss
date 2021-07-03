@@ -24,6 +24,12 @@
             border: 1px solid #ECEFF6;
             border-radius: 8px;
             color: $color-black;
+
+            &::placeholder {
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                color: $color-black;
+            }
         }
 
         button {

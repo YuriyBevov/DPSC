@@ -22,6 +22,8 @@
 </clipPath>
 </defs><symbol id="icon-arr-big" viewBox="0 0 13 22">
 <path d="M2 2.14258L11.1659 11.0235L2.28493 20.1894"></path>
+</symbol><symbol id="icon-arr-down" viewBox="0 0 11 11">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.56003 0.313614C5.73454 0.313027 5.90214 0.38179 6.02596 0.504776C6.14977 0.627762 6.21966 0.794896 6.22025 0.969412L6.24588 8.59312L9.06056 5.75813C9.12153 5.69674 9.194 5.64797 9.27382 5.61459C9.35364 5.58121 9.43926 5.56388 9.52578 5.56359C9.6123 5.5633 9.69803 5.58005 9.77808 5.61289C9.85812 5.64573 9.93092 5.69402 9.9923 5.75499C10.0537 5.81597 10.1025 5.88843 10.1358 5.96826C10.1692 6.04808 10.1865 6.1337 10.1868 6.22022C10.1871 6.30674 10.1704 6.39247 10.1375 6.47251C10.1047 6.55256 10.0564 6.62535 9.99543 6.68674L6.06065 10.6481C5.99973 10.7096 5.92728 10.7584 5.84745 10.7919C5.76762 10.8253 5.68198 10.8427 5.59542 10.843C5.50887 10.8432 5.42312 10.8265 5.34306 10.7936C5.26301 10.7606 5.19023 10.7123 5.1289 10.6512L1.16757 6.71641C1.10619 6.65544 1.05741 6.58297 1.02403 6.50315C0.990655 6.42333 0.973325 6.33771 0.973034 6.25119C0.972744 6.16467 0.989497 6.07894 1.02234 5.9989C1.05518 5.91885 1.10347 5.84606 1.16444 5.78467C1.28758 5.6607 1.45493 5.59072 1.62966 5.59014C1.71618 5.58984 1.80191 5.6066 1.88196 5.63944C1.962 5.67228 2.0348 5.72057 2.09618 5.78154L4.92986 8.59754L4.90423 0.973836C4.90364 0.799321 4.97241 0.63172 5.09539 0.507905C5.21838 0.384089 5.38551 0.3142 5.56003 0.313614Z" fill="#B8D3CF"></path>
 </symbol><symbol id="icon-arr" viewBox="0 0 6 9">
 <path d="M1 1L5 4.5L1 8" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
 </symbol><symbol id="icon-arr_long" viewBox="0 0 11 11">
@@ -53,7 +55,13 @@
     </div>
     <header class="cmn header"> 
       <div class="cmn__wrapper header__wrapper">
-        <p>шапка</p>
+        <nav class="header-nav nav"><a href="#" aria-label="открыть меню"> 
+            <svg width="34" height="17">
+              <use xlink:href="#icon-burger"></use>
+            </svg></a></nav><a class="cmn__logo" href="#" aria-label="Обновить страницу"><img src="./assets/img/logo@1x.png" srcset="./assets/img/logo@2x.png 2x" alt="логотип" width="76" height="33"></a><a class="cmn cmn__serviceBtn" href="#" type="button"><span>Все услуги</span>
+          <svg width="7" height="10">
+            <use xlink:href="#icon-arr"></use>
+          </svg></a>
       </div>
     </header>
     <main>
@@ -67,7 +75,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card1@1x.webp 1x,./assets/img/card1@2x.webp 2x"><img src="./assets/img/card1@1x.jpg" srcset="./assets/img/card1@2x.jpg 2x" alt="Завести авто">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Завести авто</h3>
@@ -83,7 +95,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card2@1x.webp 1x,./assets/img/card2@2x.webp 2x"><img src="./assets/img/card2@1x.jpg" srcset="./assets/img/card2@2x.jpg 2x" alt="Шиномонтаж выезд">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Шиномонтаж выезд</h3>
@@ -99,7 +115,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card3@1x.webp 1x,./assets/img/card3@2x.webp 2x"><img src="./assets/img/card3@1x.jpg" srcset="./assets/img/card3@2x.jpg 2x" alt="Автоэлектрик ">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Автоэлектрик </h3>
@@ -115,7 +135,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card4@1x.webp 1x,./assets/img/card4@2x.webp 2x"><img src="./assets/img/card4@1x.jpg" srcset="./assets/img/card4@2x.jpg 2x" alt="Эвакуатор">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Эвакуатор</h3>
@@ -131,7 +155,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card5@1x.webp 1x,./assets/img/card5@2x.webp 2x"><img src="./assets/img/card5@1x.jpg" srcset="./assets/img/card5@2x.jpg 2x" alt="Автоэлектрик">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Автоэлектрик</h3>
@@ -147,7 +175,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card6@1x.webp 1x,./assets/img/card6@2x.webp 2x"><img src="./assets/img/card6@1x.jpg" srcset="./assets/img/card6@2x.jpg 2x" alt="Сканер Check">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Сканер Check</h3>
@@ -163,7 +195,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card7@1x.webp 1x,./assets/img/card7@2x.webp 2x"><img src="./assets/img/card7@1x.jpg" srcset="./assets/img/card7@2x.jpg 2x" alt="Доставка акума">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Доставка акума</h3>
@@ -179,7 +215,11 @@
                 <picture>
                   <source type="image/webp" srcset="./assets/img/card8@1x.webp 1x, ./assets/img/card8@2x.webp 2x"><img src="./assets/mg/card8@1x.jpg" srcset="./assets/img/card8@2x.jpg 2x" alt="Помыть машину">
                 </picture>
-                <div class="assistance__card-rate"> <span>4.8</span></div>
+                <div class="assistance__card-rate">
+                  <svg width="16" height="16">
+                    <use xlink:href="#icon-star"></use>
+                  </svg><span>4.8</span>
+                </div>
               </div>
               <div class="assistance__card-desc">
                 <h3>Помыть машину</h3>
@@ -197,17 +237,46 @@
         <div class="cmn__wrapper situations__wrapper">
           <h2 class="cmn__title situations__title">Ситуации</h2>
           <p class="cmn__text situations__desc">Попроси помощь в чате!</p>
-          <div class="situations__slider">
-            <p>тут будет слайдер</p>
-          </div>
-          <button class="situations__btn" type="button">
+          <div class="situations-swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p class="cmn__text">Если кончился бензин</p>
+                <svg width="12" height="16">
+                  <use xlink:href="#icon-arr-down"></use>
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <p class="cmn__text">Если подперли и не оставили номер</p>
+                <svg width="12" height="16">
+                  <use xlink:href="#icon-arr-down"></use>
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <p class="cmn__text">Если нужно прикурить</p>
+                <svg width="12" height="16">
+                  <use xlink:href="#icon-arr-down"></use>
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <p class="cmn__text">Если нужно отбуксировать</p>
+                <svg width="12" height="16">
+                  <use xlink:href="#icon-arr-down"></use>
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <p class="cmn__text">Если нужно помочь заменить колесо</p>
+                <svg width="12" height="16">
+                  <use xlink:href="#icon-arr-down"></use>
+                </svg>
+              </div>
+            </div>
+          </div><a class="situations__btn" href="#" type="button">
             <svg width="24" height="28">
               <use xlink:href="#icon-tg"></use>
             </svg><span>ДПС-Контроль </span>
             <svg width="10" height="12">
               <use xlink:href="#icon-arr_long"></use>
-            </svg><span>Сегодня</span>
-          </button>
+            </svg><span>Сегодня</span></a>
         </div>
       </section>
       <section class="food cmn">
@@ -331,7 +400,13 @@
       </section>
     </main>
     <div class="footer">
-      <div class="cmn__wrapper footer__wrapper"><a href="#" aria-label="Обновить страницу"><img src="../assets/img/logo.png" width="76" height="33" alt="логотип"></a></div>
+      <div class="cmn__wrapper footer__wrapper">
+        <div class="footer__header"><a class="cmn__logo" href="#" aria-label="Обновить страницу"><img src="./assets/img/logo@1x.png" srcset="./assets/img/logo@2x.png 2x" alt="логотип" width="76" height="33"></a><a class="cmn cmn__serviceBtn" href="#" type="button"><span>Все услуги</span>
+            <svg width="7" height="10">
+              <use xlink:href="#icon-arr"></use>
+            </svg></a></div>
+        <div class="footer__bottom"><img src="./assets/img/copyrights@1x.png" srcset="./assets/img/copyrights@2x.png 2x" alt="все права защищены" width="44" height="15"></div>
+      </div>
     </div>
     <script src="./js/bundle.js"></script>
   </body>

@@ -20,7 +20,9 @@ section.assistance.cmn
             picture
               source(type="image/webp" srcset=card.url + '@1x.webp 1x,' + card.url + '@2x.webp 2x')
               img(src=card.url + '@1x.jpg' srcset=card.url + '@2x.jpg 2x' alt=card.title)
-            .assistance__card-rate  
+            .assistance__card-rate
+              svg(width="16" height="16")
+                use(xlink:href="#icon-star")
               span 4.8
           .assistance__card-desc
             h3= card.title
@@ -33,7 +35,9 @@ section.assistance.cmn
           picture
             source(type="image/webp" srcset='./assets/img/card8@1x.webp 1x, ./assets/img/card8@2x.webp 2x')
             img(src='./assets/mg/card8@1x.jpg' srcset='./assets/img/card8@2x.jpg 2x' alt="Помыть машину")
-          .assistance__card-rate  
+          .assistance__card-rate
+            svg(width="16" height="16")
+              use(xlink:href="#icon-star")
             span 4.8
         .assistance__card-desc
             h3 Помыть машину

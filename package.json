@@ -49,5 +49,8 @@
   "bugs": {
     "url": "https://github.com/YuriyBevov/niti/issues"
   },
-  "homepage": "https://github.com/YuriyBevov/niti#readme"
+  "homepage": "https://github.com/YuriyBevov/niti#readme",
+  "dependencies": {
+    "swiper": "^6.7.5"
+  }
 }
