@@ -1,0 +1,43 @@
+section.assistance.cmn
+  .cmn__wrapper
+    h2.cmn__title.assistance__title Оперативная помощь
+    p.cmn__text.assistance__desc Решить критическую ситуацию здесь и сейчас.
+
+    ul.assistance__list
+      -
+        const cards = [
+          {title: 'Завести авто', desc: 'Прикурить, заправить, починить. Заводим в 100% случаев.', url: '../assets/img/card1'},
+          {title: 'Шиномонтаж выезд', desc: 'Смена шин, ремонт колёс, тормозов, боковых порезов на дороге.', url: '../assets/img/card2'},
+          {title: 'Автоэлектрик ', desc: 'Открыть машину без ключей. Разблочить сигнализацию.', url: '../assets/img/card3'},
+          {title: 'Эвакуатор', desc: 'Заказать эвакуатор или буксировку', url: '../assets/img/card4'},
+          {title: 'Автоэлектрик', desc: 'Решить проблемы с электрикой', url: '../assets/img/card5'},
+          {title: 'Сканер Check', desc: 'Выяснить, почему загореглась лампочка Check Engine', url: '../assets/img/card6'},
+          {title: 'Доставка акума', desc: 'Привезем новый аккумулятор', url: '../assets/img/card7'},
+        ];
+      each card in cards
+        li.assistance__card
+          .assistance__card-avatar  
+            picture
+              source(type="image/webp" srcset=card.url + '@1x.webp 1x,' + card.url + '@2x.webp 2x')
+              img(src=card.url + '@1x.jpg' srcset=card.url + '@2x.jpg 2x' alt=card.title)
+            .assistance__card-rate  
+              span 4.8
+          .assistance__card-desc
+            h3= card.title
+            p= card.desc
+          .assistance__card-link
+            include ../../components/phoneBtn.pug
+
+      li.assistance__card
+        .assistance__card-avatar  
+          picture
+            source(type="image/webp" srcset='../assets/img/card8@1x.webp 1x, ../assets/img/card8@2x.webp 2x')
+            img(src='../assets/mg/card8@1x.jpg' srcset='../assets/img/card8@2x.jpg 2x' alt="Помыть машину")
+          .assistance__card-rate  
+            span 4.8
+        .assistance__card-desc
+            h3 Помыть машину
+            p Выбрать автомойку по району и ценам. Смотрите все автомойки.
+        .assistance__card-link
+          a.assistance__card-link--more(href="#")
+            

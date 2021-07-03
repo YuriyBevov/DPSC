@@ -1,2 +1,150 @@
-
-<h1>Привет!</h1>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>ДПС контроль</title>
+    <!-- link(rel="preload" href="./fonts/InterReg.woff" as="font" type="font/woff" crossorigin)-->
+    <!-- link(rel="preload" href="./fonts/MontserratMed.woff" as="font" type="font/woff" crossorigin)-->
+    <!-- link(rel="preload" href="./fonts/MontserratMed.woff2" as="font" type="font/woff2" crossorigin)-->
+    <!-- link(rel="preload" href="./fonts/MontserratReg.woff" as="font" type="font/woff" crossorigin)-->
+    <!-- link(rel="preload" href="./fonts/MontserratReg.woff2" as="font" type="font/woff2" crossorigin)-->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+    <link rel="stylesheet" href="./css/styles.min.css"/>
+  </head>
+  <body>
+    <!--div(style="display:none")
+    //include ../../assets/svg-sprite.svg 
+    
+    -->
+    <main>
+      <section class="assistance cmn">
+        <div class="cmn__wrapper">
+          <h2 class="cmn__title assistance__title">Оперативная помощь</h2>
+          <p class="cmn__text assistance__desc">Решить критическую ситуацию здесь и сейчас.</p>
+          <ul class="assistance__list">
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card1@1x.webp 1x,../assets/img/card1@2x.webp 2x"><img src="../assets/img/card1@1x.jpg" srcset="../assets/img/card1@2x.jpg 2x" alt="Завести авто">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Завести авто</h3>
+                <p>Прикурить, заправить, починить. Заводим в 100% случаев.</p>
+              </div>
+              <div class="assistance__card-link"><a class="cmn__phoneBtn" href="#">Вызов</a></div>
+            </li>
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card2@1x.webp 1x,../assets/img/card2@2x.webp 2x"><img src="../assets/img/card2@1x.jpg" srcset="../assets/img/card2@2x.jpg 2x" alt="Шиномонтаж выезд">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Шиномонтаж выезд</h3>
+                <p>Смена шин, ремонт колёс, тормозов, боковых порезов на дороге.</p>
+              </div>
+              <div class="assistance__card-link"><a class="cmn__phoneBtn" href="#">Вызов</a></div>
+            </li>
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card3@1x.webp 1x,../assets/img/card3@2x.webp 2x"><img src="../assets/img/card3@1x.jpg" srcset="../assets/img/card3@2x.jpg 2x" alt="Автоэлектрик ">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Автоэлектрик </h3>
+                <p>Открыть машину без ключей. Разблочить сигнализацию.</p>
+              </div>
+              <div class="assistance__card-link"><a class="cmn__phoneBtn" href="#">Вызов</a></div>
+            </li>
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card4@1x.webp 1x,../assets/img/card4@2x.webp 2x"><img src="../assets/img/card4@1x.jpg" srcset="../assets/img/card4@2x.jpg 2x" alt="Эвакуатор">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Эвакуатор</h3>
+                <p>Заказать эвакуатор или буксировку</p>
+              </div>
+              <div class="assistance__card-link"><a class="cmn__phoneBtn" href="#">Вызов</a></div>
+            </li>
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card5@1x.webp 1x,../assets/img/card5@2x.webp 2x"><img src="../assets/img/card5@1x.jpg" srcset="../assets/img/card5@2x.jpg 2x" alt="Автоэлектрик">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Автоэлектрик</h3>
+                <p>Решить проблемы с электрикой</p>
+              </div>
+              <div class="assistance__card-link"><a class="cmn__phoneBtn" href="#">Вызов</a></div>
+            </li>
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card6@1x.webp 1x,../assets/img/card6@2x.webp 2x"><img src="../assets/img/card6@1x.jpg" srcset="../assets/img/card6@2x.jpg 2x" alt="Сканер Check">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Сканер Check</h3>
+                <p>Выяснить, почему загореглась лампочка Check Engine</p>
+              </div>
+              <div class="assistance__card-link"><a class="cmn__phoneBtn" href="#">Вызов</a></div>
+            </li>
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card7@1x.webp 1x,../assets/img/card7@2x.webp 2x"><img src="../assets/img/card7@1x.jpg" srcset="../assets/img/card7@2x.jpg 2x" alt="Доставка акума">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Доставка акума</h3>
+                <p>Привезем новый аккумулятор</p>
+              </div>
+              <div class="assistance__card-link"><a class="cmn__phoneBtn" href="#">Вызов</a></div>
+            </li>
+            <li class="assistance__card">
+              <div class="assistance__card-avatar"> 
+                <picture>
+                  <source type="image/webp" srcset="../assets/img/card8@1x.webp 1x, ../assets/img/card8@2x.webp 2x"><img src="../assets/mg/card8@1x.jpg" srcset="../assets/img/card8@2x.jpg 2x" alt="Помыть машину">
+                </picture>
+                <div class="assistance__card-rate"> <span>4.8</span></div>
+              </div>
+              <div class="assistance__card-desc">
+                <h3>Помыть машину</h3>
+                <p>Выбрать автомойку по району и ценам. Смотрите все автомойки.</p>
+              </div>
+              <div class="assistance__card-link"><a class="assistance__card-link--more" href="#"></a></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <h2>Ситуации</h2>
+      <p>Попроси помощь в чате! </p>
+      <h2>Заправил машину? Заправься сам!</h2>
+      <h2>На случай ДТП</h2>
+      <h2>Бланк извещения о ДТП 2021</h2>
+      <h2>Смотреть все услуги</h2>
+      <h2>ДПС-Контроль</h2>
+      <h2>company</h2>
+    </main>
+    <div class="footer">
+      <h1>footer</h1>
+    </div>
+    <script src="./js/bundle.js"></script>
+  </body>
+</html>

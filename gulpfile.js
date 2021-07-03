@@ -27,6 +27,7 @@ const autoprefixer = require("autoprefixer");
 // IMAGES AND SVG
 
 const svgstore = require("gulp-svgstore");
+const webp = require("gulp-webp");
 
 // JS
 
@@ -89,6 +90,12 @@ const images = () => (
     .pipe(gulp.dest(PATHS.images.dest))
 );
 
+const toWebp = () => {
+  return gulp.src(PATHS.images.webpSrc)
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest(PATHS.images.webpDest));
+}
+
 const js = () => {
   return gulp.src([PATHS.scripts.inputFileName])
     .pipe(webpack( require('./webpack.config.js') ))
@@ -125,7 +132,9 @@ const sprite = () => {
 
 const build = gulp.series(clean, fonts, sprite, html, styles, js, images);
 const start = gulp.series(build, server);
+const convertToWebp = gulp.series(toWebp, start);
 
 exports.build = build;
 exports.start = start;
+exports.convertToWebp = convertToWebp;
 

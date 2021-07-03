@@ -1,0 +1,23 @@
+.cmn {
+    &__wrapper {
+        @include container();
+    }
+
+    &__title {
+        font-family: $font_sec;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+
+    &__phoneBtn {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: $color-blue;
+    }
+}

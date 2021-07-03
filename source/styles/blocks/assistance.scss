@@ -1,0 +1,80 @@
+.assistance {
+    &__title {
+        margin-bottom: 0.8rem;
+    }
+
+    &__desc {
+        max-width: 23rem;
+        margin-bottom: 2.7rem;
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        background: #F7F9FE;
+        padding: 1rem;
+        margin-bottom: 1.2rem;
+        border: 1px solid $color-lightgrey;
+        border-radius: 8px;
+
+        &-avatar {
+            display: flex;
+            flex-direction: column;
+            margin-right: 1.5rem;
+
+            img {
+                width: 4.1rem;
+                height: 4.1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &-rate {
+            display: flex;
+
+            span {
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+                margin-left: auto;
+
+                color: $color-lightblack;
+            }
+        }
+
+        &-desc {
+            margin-right: 1.5rem;
+
+            h3 {
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+        
+                color: $color-black;
+            }
+            
+            p {
+                font-size: 1.5rem;
+                line-height: 1.7rem;
+        
+                color: $color-lightblack;
+            }
+        }
+
+        &-link {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: auto;
+
+            &--more {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 2.8rem; // 4?
+                height: 100%;
+                background: #2C64E5;
+                border-radius: 0px 8px 8px 0px;
+            }
+        }
+    }
+}

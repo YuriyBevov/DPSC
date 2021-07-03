@@ -30,16 +30,17 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
     "webpack": "^5.38.1",
     "webpack-stream": "^5.2.1"
   },
-  "name": "NITI",
+  "name": "Дпс контроль",
   "version": "1.0.0",
-  "description": "Интернет магазин для ООО 'НИТИ'",
+  "description": "ДПС контроль",
   "main": "gulp.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YuriyBevov/niti.git"
+    "url": "git+https://github.com/YuriyBevov/DPSC.git"
   },
   "author": "Yuriy Bevov <yuriybevov@gmail.com>",
   "license": "ISC",

@@ -9,16 +9,18 @@ const PATHS = {
   },
 
   images: {
-    src: `${SOURCE_PATH}img/static/**/*.{png,jpg,svg}`,
-    spriteSrc: `${SOURCE_PATH}/img/svg-sprite/icon-*.svg`,
+    src: `${SOURCE_PATH}assets/img/**/*.{png,jpg,webp,svg}`,
+    spriteSrc: `${SOURCE_PATH}assets/icons/icon-*.svg`,
+    webpSrc: `${SOURCE_PATH}assets/img/**/*.jpg`,
+    webpDest: `${SOURCE_PATH}assets/img`,
 
-    dest: `${BUILD_PATH}img/static`,
+    dest: `${BUILD_PATH}assets/img`,
     spriteFileName: 'svg-sprite.svg',
   },
 
   html: {
     src: `${SOURCE_PATH}pug/*.pug`,
-    srcWatch: `${SOURCE_PATH}pug/*.pug`,
+    srcWatch: `${SOURCE_PATH}pug/**/**/**/*.pug`,
     dest: BUILD_PATH,
   },
 

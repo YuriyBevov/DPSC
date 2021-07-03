@@ -1,1 +1,18 @@
-h1 Привет!
+extends layouts/main-layout.pug
+
+block variables
+  -
+    const title = "ДПС контроль"
+    const desc = ""
+    const keywords = ""
+
+block content
+  
+  include ./blocks/index/assistance
+  include ./blocks/index/situations
+  include ./blocks/index/food
+  include ./blocks/index/accident
+  include ./blocks/index/application
+  include ./blocks/index/service
+  include ./blocks/index/control
+  include ./blocks/index/company
