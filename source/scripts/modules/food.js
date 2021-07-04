@@ -7,9 +7,7 @@ const body = document.querySelector('html')
 
 const onClickOpenFoodModal = () => {
     foodModal.classList.add('opened');
-
     foodModalOpenBtn.removeEventListener('click', onClickOpenFoodModal);
-
     body.style.overflowY = 'hidden'
 
     let fSlider = document.querySelector('.foodModal-swiper-container');
@@ -25,10 +23,9 @@ const onClickOpenFoodModal = () => {
         });
 
         new Swiper('.foodMenu-swiper-container', {
+            nested: true,
             slidesPerView: 1,
             spaceBetween: 20,
-        
-        
             autoplay: {
             delay: sliderDelay,
             }
@@ -38,9 +35,7 @@ const onClickOpenFoodModal = () => {
 
 const onClickCloseFoodModal = () => {
     foodModal.classList.remove('opened');
-
     foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
-
     body.style.overflowY = 'scroll'
 }
 
