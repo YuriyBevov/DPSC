@@ -12253,15 +12253,45 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_food_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/food.js */ "./source/scripts/modules/food.js");
+/* harmony import */ var _modules_accident_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accident.js */ "./source/scripts/modules/accident.js");
+/* harmony import */ var _modules_accident_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_accident_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_food_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/food.js */ "./source/scripts/modules/food.js");
 
 
 
 
 
 
+
+/***/ }),
+
+/***/ "./source/scripts/modules/accident.js":
+/*!********************************************!*\
+  !*** ./source/scripts/modules/accident.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const showMoreBtn = document.querySelector('.accident__btn');
+const items = document.querySelectorAll('.accident__card')
+
+for(i=3; i < items.length; i++) {
+    items[i].classList.add('hidden')
+}
+
+const onClickShowMore = () => {
+    items.forEach(item => {
+        item.classList.contains('hidden') ?
+        item.classList.remove('hidden') : null
+    })
+
+    showMoreBtn.removeEventListener('click', onClickShowMore)
+    showMoreBtn.classList.add('hidden')
+}
+
+showMoreBtn.addEventListener('click', onClickShowMore)
 
 
 /***/ }),
