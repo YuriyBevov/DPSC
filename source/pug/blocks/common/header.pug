@@ -1,10 +1,10 @@
 header.cmn.header 
   .cmn__wrapper.header__wrapper
     nav.header-nav.nav
-      a(href="#" aria-label="открыть меню")  
+      button 
         svg(width="34" height="17")
           use(xlink:href="#icon-burger")
-    a(href="#" aria-label="Обновить страницу").cmn__logo
+    a(href="index.html" aria-label="Обновить страницу").cmn__logo
       img(src='./assets/img/logo@1x.png' srcset='./assets/img/logo@2x.png 2x' alt='логотип' width="76" height="33")
     include ../../components/serviceBtn.pug
     

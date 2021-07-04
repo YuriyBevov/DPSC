@@ -12252,9 +12252,39 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./source/scripts/modules/menu.js":
+/*!****************************************!*\
+  !*** ./source/scripts/modules/menu.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+console.log('menu')
+
+/***/ }),
+
+/***/ "./source/scripts/modules/swiper.js":
+/*!******************************************!*\
+  !*** ./source/scripts/modules/swiper.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-
 
 
 const sliderDelay = 3000;
@@ -12271,7 +12301,6 @@ if(slider) {
         }
     });
 }
-
 
 /***/ })
 
