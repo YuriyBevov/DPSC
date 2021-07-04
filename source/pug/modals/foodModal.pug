@@ -1,52 +1,55 @@
-.foodModal.modal
+-
+  const cafes = [
+    {text: 'Бензо кафе', url: './assets/img/food5', menus: [
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
+    ]},
+    {text: 'ОП!', url: './assets/img/food1', menus: [
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
+    ]},
+    {text: 'DRAM', url: './assets/img/food2', menus: [
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
+    ]},
+    {text: 'Еда и точка', url: './assets/img/food3', menus: [
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
+    ]},
+    {text: 'Соль и перец', url: './assets/img/food4', menus: [
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
+    ]},
+  ];
+
+.foodModal.modal.opened
   .modal__wrapper.foodModal__wrapper
     button.foodModal__close.js-food-modal-close-btn
       svg(width="10" height="11")
         use(xlink:href="#icon-arr_long")
       span Назад
-    .foodModal-swiper-container
-      .swiper-wrapper
-        -
-          const cafes = [
-            {text: 'Бензо кафе', url: './assets/img/food5', menus: [
-              {url: './assets/img/menu1'},
-              {url: './assets/img/menu2'},
-            ]},
-            {text: 'ОП!', url: './assets/img/food1', menus: [
-              {url: './assets/img/menu1'},
-              {url: './assets/img/menu2'},
-            ]},
-            {text: 'DRAM', url: './assets/img/food2', menus: [
-              {url: './assets/img/menu1'},
-              {url: './assets/img/menu2'},
-            ]},
-            {text: 'Еда и точка', url: './assets/img/food3', menus: [
-              {url: './assets/img/menu1'},
-              {url: './assets/img/menu2'},
-            ]},
-            {text: 'Соль и перец', url: './assets/img/food4', menus: [
-              {url: './assets/img/menu1'},
-              {url: './assets/img/menu2'},
-            ]},
-          ];
+    
+    ul.foodModal__list
+      each cafe in cafes
+        li.foodModal__item
+          .foodModal__item-header
+            .foodModal__item-avatar
+              img(src=cafe.url + '@1x.png' srcset=cafe.url + '@2x.png 2x' alt=cafe.title)
+              
+            .foodModal__item-content
+              h2.cmn__text.cmn__text--bold= cafe.text
+              button.js-show-food-menu-btn.foodModal__item-content-btn.closed Свернуть меню
+                
+                svg(width="8" height="10")
+                  use(xlink:href="#icon-arr")
+          
+          .foodModal-swiper-container.visually-hidden
+            .swiper-wrapper
+              each menu in cafe.menus
+                .swiper-slide
+                  img(src=menu.url + '@1x.jpg' srcset=menu.url + '@2x.jpg 2x' alt="меню")
+        
 
-        each cafe in cafes
-          .swiper-slide.foodModal__slide
-            .foodModal__slide-wrapper
-              .foodModal__slide-avatar
-                img(src=cafe.url + '@1x.png' srcset=cafe.url + '@2x.png 2x' alt=cafe.text)
-              .foodModal__slide-content
-                p.cmn__text.cmn__text--bold= cafe.text
-                button.js-show-food-menu-btn.foodModal__slide-content-btn.closed
-                  span Свернуть меню
-                  svg(width="8" height="10")
-                    use(xlink:href="#icon-arr")
             
-            .foodMenu
-              .foodMenu-swiper-container
-                .swiper-wrapper
-                  each menu in cafe.menus
-                    .swiper-slide.foodMenu__slide
-                      img(src=menu.url + '@1x.jpg' srcset=menu.url + '@2x.jpg 2x')
               
 

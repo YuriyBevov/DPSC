@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+
 const sliderDelay = 3000;
 const foodModal = document.querySelector('.foodModal');
 const foodModalOpenBtn = document.querySelector('.js-food-modal-opener');
@@ -10,26 +11,19 @@ const onClickOpenFoodModal = () => {
     foodModalOpenBtn.removeEventListener('click', onClickOpenFoodModal);
     body.style.overflowY = 'hidden'
 
-    let fSlider = document.querySelector('.foodModal-swiper-container');
+    let fSlider = document.querySelectorAll('.foodModal-swiper-container');
 
     if(fSlider) {
+      fSlider.forEach(el => {
         new Swiper('.foodModal-swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            
-            autoplay: {
-            delay: sliderDelay,
-            }
-        });
-
-        new Swiper('.foodMenu-swiper-container', {
-            nested: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            autoplay: {
-            delay: sliderDelay,
-            }
-        });
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                    
+                    autoplay: {
+                    delay: sliderDelay,
+                }
+            });
+        })
     }
 }
 
@@ -42,3 +36,21 @@ const onClickCloseFoodModal = () => {
 foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
 
 foodModalCloseBtn.addEventListener('click', onClickCloseFoodModal);
+
+const showBtn = document.querySelectorAll('.js-show-food-menu-btn')
+
+const onShowBtnClick = (evt) => {
+    const item = evt.target.closest('.foodModal__item')
+
+    const menu = item.querySelector('.foodModal-swiper-container')
+
+    if(menu.classList.contains('visually-hidden')) {
+        menu.classList.remove('visually-hidden')
+    } else {
+        menu.classList.add('visually-hidden')
+    }
+}
+
+showBtn.forEach(btn => {
+    btn.addEventListener('click', onShowBtnClick)
+})

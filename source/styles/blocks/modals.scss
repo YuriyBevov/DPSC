@@ -124,10 +124,15 @@
     }
 
     &-swiper-container {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        padding-bottom: 1.4rem;
+        // display: none;
+        &.opened {
+            display: flex;
+        }
+
+        margin-bottom: 2rem;
+        .swiper-slide {
+            width: 24.5rem;
+        }
     }
 
     &__close {
@@ -149,10 +154,13 @@
         }
     }
 
-    &__slide {
+    &__item {
         display: flex;
         flex-direction: column;
-        width: 100%;
+
+        &-header {
+            display: flex;
+        }
 
         &-avatar {
             margin-right: 1.8rem;
@@ -166,8 +174,8 @@
         &-content {
             width: 100%;
             flex-grow: 1;
-            
-            p {
+
+            h2 {
                 margin-bottom: 1.3rem;
             }
 
@@ -183,11 +191,8 @@
                 color: $color-black;
                 margin-bottom: 2.5rem;
 
-                span {
-                    margin-right: 1rem;
-                }
-
                 svg {
+                    margin-left: 1rem;
                     transform: rotate(90deg)
                 }
 
@@ -200,23 +205,4 @@
         }
     }
 
-    .foodMenu {
-        position: relative;
-
-        &__container {
-            display: flex;
-            width: 100%;
-            scroll-behavior: auto;
-            overflow-x: scroll;
-            padding-bottom: 2rem;
-        }
-
-        &__slide {
-            padding-right: 2rem;
-
-            img {
-                width: 245px;
-            }
-        }
-    }
 }

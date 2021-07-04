@@ -12277,6 +12277,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
+
 const sliderDelay = 3000;
 const foodModal = document.querySelector('.foodModal');
 const foodModalOpenBtn = document.querySelector('.js-food-modal-opener');
@@ -12288,26 +12289,19 @@ const onClickOpenFoodModal = () => {
     foodModalOpenBtn.removeEventListener('click', onClickOpenFoodModal);
     body.style.overflowY = 'hidden'
 
-    let fSlider = document.querySelector('.foodModal-swiper-container');
+    let fSlider = document.querySelectorAll('.foodModal-swiper-container');
 
     if(fSlider) {
+      fSlider.forEach(el => {
         new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.foodModal-swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            
-            autoplay: {
-            delay: sliderDelay,
-            }
-        });
-
-        new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.foodMenu-swiper-container', {
-            nested: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            autoplay: {
-            delay: sliderDelay,
-            }
-        });
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                    
+                    autoplay: {
+                    delay: sliderDelay,
+                }
+            });
+        })
     }
 }
 
@@ -12320,6 +12314,24 @@ const onClickCloseFoodModal = () => {
 foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
 
 foodModalCloseBtn.addEventListener('click', onClickCloseFoodModal);
+
+const showBtn = document.querySelectorAll('.js-show-food-menu-btn')
+
+const onShowBtnClick = (evt) => {
+    const item = evt.target.closest('.foodModal__item')
+
+    const menu = item.querySelector('.foodModal-swiper-container')
+
+    if(menu.classList.contains('visually-hidden')) {
+        menu.classList.remove('visually-hidden')
+    } else {
+        menu.classList.add('visually-hidden')
+    }
+}
+
+showBtn.forEach(btn => {
+    btn.addEventListener('click', onShowBtnClick)
+})
 
 /***/ }),
 
