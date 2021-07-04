@@ -124,14 +124,15 @@
     }
 
     &-swiper-container {
-        // display: none;
+        overflow-x: hidden;
+
         &.opened {
             display: flex;
         }
 
         margin-bottom: 2rem;
         .swiper-slide {
-            width: 24.5rem;
+            width: 24.5rem !important;
         }
     }
 
