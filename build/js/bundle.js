@@ -12306,10 +12306,15 @@ const showBtn = document.querySelectorAll('.js-show-food-menu-btn')
 const onShowBtnClick = (evt) => {
     const menu = evt.target.closest('.foodModal__item').querySelector('.foodModal-swiper-container')
 
+    const btn = evt.target.closest('.foodModal__item').querySelector('.js-show-food-menu-btn')
     if(menu.classList.contains('opened')) {
         menu.classList.remove('opened')
+        btn.classList.add('closed')
+        // console.log(showBtn)
     } else {
         menu.classList.add('opened')
+        btn.classList.remove('closed')
+        //console.log(showBtn)
 
         new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](menu, {
                 slidesPerView: 'auto',
