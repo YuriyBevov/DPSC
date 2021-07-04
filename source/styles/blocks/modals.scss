@@ -1,4 +1,4 @@
-.menu {
+.modal {
     display: none;
     position: fixed;
     width: 100vw;
@@ -31,7 +31,9 @@
           transform: translate(-50%, 0);
         }
     }
+}
 
+.menu { 
     &__header {
         display: flex;
         margin-bottom: 2.7rem;
@@ -113,5 +115,107 @@
 
     &.opened {
         display: flex;
+    }
+}
+
+.foodModal {
+    &.opened {
+        display: flex;
+    }
+
+    &-swiper-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 1.4rem;
+    }
+
+    &__close {
+        padding: 0.5rem 1.2rem;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        font-weight: 600;
+        width: 10rem;
+        background-color: transparent;
+        border: 0.7px solid #EDF1F8;
+        border-radius: 5px;
+        color: $color-black;
+        margin-bottom: 3.1rem;
+
+        svg {
+            fill: $color-black;
+            margin-right: 1rem;
+            transform: rotate(180deg)
+        }
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &-avatar {
+            margin-right: 1.8rem;
+
+            img {
+                width: 6.3rem;
+                height: 6.3rem;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            flex-grow: 1;
+            
+            p {
+                margin-bottom: 1.3rem;
+            }
+
+            &-btn {
+                width: 100%;
+                max-width: 25.3rem;
+                font-size: 1.7rem;
+                line-height: 2rem;
+                padding: 1rem;
+                background-color: transparent;
+                border: 1px solid #D8E0E7;
+                border-radius: 8px;
+                color: $color-black;
+                margin-bottom: 2.5rem;
+
+                span {
+                    margin-right: 1rem;
+                }
+
+                svg {
+                    transform: rotate(90deg)
+                }
+
+                &.closed {
+                    svg {
+                        transform: rotate(-90deg)
+                    }
+                }
+            }
+        }
+    }
+
+    .foodMenu {
+        position: relative;
+
+        &__container {
+            display: flex;
+            width: 100%;
+            overflow-x: scroll;
+            padding-bottom: 2rem;
+        }
+
+        &__slide {
+            padding-right: 2rem;
+
+            img {
+                width: 245px;
+            }
+        }
     }
 }

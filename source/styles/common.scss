@@ -21,6 +21,10 @@
         &--white {
             color: $color-white;
         }
+
+        &--bold {
+            font-weight: 600;
+        }
     }
 
     &__phoneBtn {

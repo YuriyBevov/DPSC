@@ -12255,12 +12255,76 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_food_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/food.js */ "./source/scripts/modules/food.js");
 
 
 
 
 
 
+
+
+/***/ }),
+
+/***/ "./source/scripts/modules/food.js":
+/*!****************************************!*\
+  !*** ./source/scripts/modules/food.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+const sliderDelay = 3000;
+const foodModal = document.querySelector('.foodModal');
+const foodModalOpenBtn = document.querySelector('.js-food-modal-opener');
+const foodModalCloseBtn = document.querySelector('.js-food-modal-close-btn');
+const body = document.querySelector('html')
+
+const onClickOpenFoodModal = () => {
+    foodModal.classList.add('opened');
+
+    foodModalOpenBtn.removeEventListener('click', onClickOpenFoodModal);
+
+    body.style.overflowY = 'hidden'
+
+    let fSlider = document.querySelector('.foodModal-swiper-container');
+
+    if(fSlider) {
+        new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.foodModal-swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            
+            autoplay: {
+            delay: sliderDelay,
+            }
+        });
+
+        new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.foodMenu-swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        
+        
+            autoplay: {
+            delay: sliderDelay,
+            }
+        });
+    }
+}
+
+const onClickCloseFoodModal = () => {
+    foodModal.classList.remove('opened');
+
+    foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
+
+    body.style.overflowY = 'scroll'
+}
+
+foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
+
+foodModalCloseBtn.addEventListener('click', onClickCloseFoodModal);
 
 /***/ }),
 
@@ -12274,6 +12338,7 @@ __webpack_require__.r(__webpack_exports__);
 const menu = document.querySelector('.menu');
 const menuOpenBtns = document.querySelectorAll('.js-menu-opener');
 const menuCloseBtn = document.querySelector('.js-menu-close-btn');
+const body = document.querySelector('html')
 
 const onClickOpenMenu = () => {
     menu.classList.add('opened');
@@ -12281,6 +12346,8 @@ const onClickOpenMenu = () => {
     menuOpenBtns.forEach(btn => {
         btn.removeEventListener('click', onClickOpenMenu);
     });
+
+    body.style.overflowY = 'hidden'
 }
 
 const onClickCloseMenu = () => {
@@ -12289,6 +12356,8 @@ const onClickCloseMenu = () => {
     menuOpenBtns.forEach(btn => {
         btn.addEventListener('click', onClickOpenMenu);
     });
+
+    body.style.overflowY = 'scroll'
 }
 
 menuOpenBtns.forEach(btn => {
@@ -12313,9 +12382,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const sliderDelay = 3000;
 
-let slider = document.querySelector('.situations-swiper-container');
+let sSlider = document.querySelector('.situations-swiper-container');
 
-if(slider) {
+if(sSlider) {
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.situations-swiper-container', {
         slidesPerView: 'auto',
         spaceBetween: 10,
