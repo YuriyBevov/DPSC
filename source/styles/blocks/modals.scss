@@ -125,9 +125,10 @@
 
     &-swiper-container {
         overflow-x: hidden;
+        display: none;
 
         &.opened {
-            display: flex;
+            display: block;
         }
 
         margin-bottom: 2rem;

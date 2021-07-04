@@ -3,12 +3,18 @@
     {text: 'Бензо кафе', url: './assets/img/food5', menus: [
       {url: './assets/img/menu1'},
       {url: './assets/img/menu2'},
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
     ]},
     {text: 'ОП!', url: './assets/img/food1', menus: [
       {url: './assets/img/menu1'},
       {url: './assets/img/menu2'},
     ]},
     {text: 'DRAM', url: './assets/img/food2', menus: [
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
+      {url: './assets/img/menu1'},
+      {url: './assets/img/menu2'},
       {url: './assets/img/menu1'},
       {url: './assets/img/menu2'},
     ]},
@@ -43,7 +49,7 @@
                 svg(width="8" height="10")
                   use(xlink:href="#icon-arr")
           
-          .foodModal-swiper-container.visually-hidden
+          .foodModal-swiper-container
             .swiper-wrapper
               each menu in cafe.menus
                 .swiper-slide
