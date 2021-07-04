@@ -1,0 +1,38 @@
+.menu.opened
+  .menu__wrapper
+    .menu__header
+      b Выберите категорию:
+      button.menu__close.js-menu-close-btn
+        svg(width="24" height="24")
+          use(xlink:href="#icon-close")
+      
+    ul.menu__list
+        -
+          const items = [
+            {text: 'Завести машину', iconName: '#icon-menu1'},
+            {text: 'Выездной шиномонтаж', iconName: '#icon-menu2'},
+            {text: 'Эвакуатор или буксировка', iconName: '#icon-menu3'},
+            {text: 'Мойка ', iconName: '#icon-menu4'},
+            {text: 'Автоэлектрик', iconName: '#icon-menu5'},
+            {text: 'Открыть машину', iconName: '#icon-menu6'},
+            {text: 'Батарейка от пульта', iconName: '#icon-menu7'},
+            {text: 'Кончился бенз', iconName: '#icon-menu8'},
+            {text: 'Подперли', iconName: '#icon-menu9'},
+            {text: 'Проголодался? Пожрать', iconName: '#icon-menu10'},
+            {text: 'Въебались? Аварийный.', iconName: '#icon-menu11'},
+            {text: 'Инструкция по оформлению ДТП', iconName: '#icon-menu12'},
+            {text: 'Сел акум?', iconName: '#icon-menu13'},
+          ];
+
+        each item in items
+          li.menu__item
+            a(href="#").menu__link
+              .menu__item-icon
+                svg(width="34" height="17")
+                  use(xlink:href= item.iconName)
+              p.menu__item-desc= item.text
+              svg(width="10" height="16").menu__item-arr
+                use(xlink:href="#icon-menu-arr")
+    button.menu__btn Другое
+      svg(width="8" height="11").menu__item-arr
+        use(xlink:href="#icon-arr")
