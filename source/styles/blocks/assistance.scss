@@ -67,28 +67,27 @@
             }
         }
 
-        &-link {
-            
+        &-link-box {
             display: flex;
             flex-direction: column;
             justify-content: center;
             margin-left: auto;
+        }
 
-            &--more {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 4rem;
-                height: 100%;
-                background: $color-blue;
-                border-radius: 0px 8px 8px 0px;
+        &-link--more {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4rem;
+            height: 100%;
+            background: $color-blue;
+            border-radius: 0px 8px 8px 0px;
 
-                svg {
-                    fill: none;
-                }
+            svg {
+                fill: none;
             }
         }
     }

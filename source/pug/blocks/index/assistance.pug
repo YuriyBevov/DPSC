@@ -27,7 +27,7 @@ section.assistance.cmn
           .assistance__card-desc
             h3= card.title
             p= card.desc
-          .assistance__card-link
+          .assistance__card-link-box
             include ../../components/phoneBtn.pug
 
       li.assistance__card.assistance__card--cleaning
@@ -42,8 +42,8 @@ section.assistance.cmn
         .assistance__card-desc
             h3 Помыть машину
             p Выбрать автомойку по району и ценам. Смотрите все автомойки.
-        .assistance__card-link
-          a.assistance__card-link--more(href="#" aria-label="Показать автомойки")
+        .assistance__card-link-box
+          a.assistance__card-link.assistance__card-link--more(href="#" aria-label="Показать автомойки")
             svg(width="7" height="10")
               use(xlink:href="#icon-arr_short")
             
