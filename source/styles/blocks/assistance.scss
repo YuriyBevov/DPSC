@@ -60,6 +60,13 @@
             }
         }
 
+        &--cleaning {
+            .assistance__card-desc {
+                margin-right: 0;
+                padding-right: 4rem;
+            }
+        }
+
         &-link {
             
             display: flex;
