@@ -4,7 +4,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
-    z-index: 10;
+    z-index: 1000;
 
     &__wrapper {
         position: absolute;
@@ -34,8 +34,6 @@
 
     &__header {
         display: flex;
-        // align-items: center;
-        
         margin-bottom: 2.7rem;
 
         b {
@@ -49,7 +47,6 @@
     }
 
     &__close {
-        cursor: pointer;
         border: none;
         background-color: transparent;
         margin-left: auto;
