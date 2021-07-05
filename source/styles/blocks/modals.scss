@@ -20,6 +20,7 @@
         z-index: 10;
         padding: 2.7rem 1.5rem;
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
         transition: all 3s 0.2s ease;
         animation: showModal 0.5s forwards;
     }
