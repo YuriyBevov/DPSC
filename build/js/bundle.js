@@ -12258,6 +12258,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_food_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/food.js */ "./source/scripts/modules/food.js");
+/* harmony import */ var _modules_wash_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/wash.js */ "./source/scripts/modules/wash.js");
+/* harmony import */ var _modules_wash_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_wash_js__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -12423,6 +12426,33 @@ if(sSlider) {
         }
     });
 }
+
+/***/ }),
+
+/***/ "./source/scripts/modules/wash.js":
+/*!****************************************!*\
+  !*** ./source/scripts/modules/wash.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const btn = document.querySelector('.assistance__card-link--more')
+const modal = document.querySelector('.washModal')
+const closeBtn = document.querySelector('.js-wash-modal-close-btn')
+
+const onClickCloseModal = () => {
+    modal.classList.remove('opened')
+    btn.addEventListener('click', onClickOpenModal)
+}
+
+const onClickOpenModal = () => {
+    modal.classList.add('opened')
+
+    btn.removeEventListener('click', onClickOpenModal)
+    closeBtn.addEventListener('click', onClickCloseModal)
+}
+
+btn.addEventListener('click', onClickOpenModal)
 
 /***/ })
 

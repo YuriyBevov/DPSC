@@ -36,7 +36,12 @@
     }
 }
 
-.menu { 
+.menu {
+
+    &__wrapper {
+        padding-bottom: 0;
+    }
+
     &__header {
         display: flex;
         margin-bottom: 2.7rem;
@@ -86,6 +91,11 @@
         &:hover,
         &:focus {
             background-color: #F7F9FE;
+        }
+
+        &:last-child {
+            margin-bottom: 4.3rem;
+            border-bottom: 1px solid #EDF1F8;
         }
     }
 
@@ -225,4 +235,55 @@
         }
     }
 
+}
+
+.washModal {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    &.opened {
+        display: flex;
+    }
+
+    &__content {
+        margin: auto 0;
+        b {
+            display: block;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            margin-bottom: 1.2rem;
+
+            color: $color-black;
+        }
+
+        p {
+            font-size: 1.7rem;
+            line-height: 2rem;
+            margin-bottom: 3.6rem;
+
+            color: #363C4A;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        border: 1px solid $color-blue;
+        border-radius: 8px;
+        color: $color-blue;
+
+        svg {
+            margin-right: 1.3rem;
+            fill: $color-blue;
+        }
+    }
 }

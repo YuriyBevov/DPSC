@@ -1,0 +1,15 @@
+.washModal.modal.cmn
+  .modal__wrapper.washModal__wrapper
+    button.foodModal__close.js-wash-modal-close-btn
+      svg(width="10" height="11")
+        use(xlink:href="#icon-arr_long")
+      span Назад
+
+    .washModal__content
+      b.cmn__text.cmn__text--bold Пока автомоек нет. Добавьте свою. Или другой свой бизнес
+      p.cmn__text Напишите в Telegram, чтобы добавить компанию в подборку сервисов и услуг ДПС-Контроль
+      a.washModal__link(href="#")
+        svg(width="24" height="28")
+          use(xlink:href="#icon-tg")
+        span Написать
+    include ../components/modalFooter.pug
