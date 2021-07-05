@@ -18,6 +18,11 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  padding: 0 !important;
 }
 
 body {
@@ -25,9 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: $font_prim, sans-serif;
-  -webkit-text-size-adjust: none;
-  -webkit-appearance: none;
-  padding: 0 !important;
 }
 
 .schema {
