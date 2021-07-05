@@ -4,6 +4,16 @@ mixin head(title, desc, keywords)
     meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
 
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ДПС контроль">
+  <meta property="og:description" content="Оперативная помощь на дороге">
+  <meta property="og:url" content="https://dpscontrol.ru/index.htm">
+  <meta property="og:image" content="https://dpscontrol.ru/assets/img/thumbnail.jpg">
+  <meta property="og:locale" content="ru_RU">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://dpscontrol.ru/assets/img/thumbnail.jpg"/>
+
     meta(name="description" content=`${desc}`)
     meta(name="keywords" content=`${keywords}`)
     title!= title
