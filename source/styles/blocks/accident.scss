@@ -1,13 +1,15 @@
 .accident {
+    margin-bottom: 1.4rem;
     &__wrapper {
         display: flex;
         flex-direction: column;
+        padding-top: 0;
     }
     &__header {
         display: flex;
         align-items: center;
         padding-top: 4rem;
-        padding-bottom: 2rem;
+        padding-bottom: 1.8rem;
     }
 
     &__link {
@@ -19,6 +21,8 @@
         margin-left: auto;
         border: 1px solid $color-blue;
         border-radius: 0.8rem;
+        margin-right: 0.5rem;
+        min-width: 15.9rem;
         color: $color-blue;
 
         span {
@@ -26,11 +30,19 @@
         }
     }
 
+    &__list {
+        margin-bottom: 2.3rem;
+    }
+
     &__card {
         display: flex;
         align-items: center;
-        padding: 2rem 0;
+        padding: 1.7rem 0 2rem;
         border-top: 1px solid #EDF1F8;
+
+        a {
+            margin-right: 1rem;
+        }
 
         &:last-child{
             margin-bottom: 2.1rem;

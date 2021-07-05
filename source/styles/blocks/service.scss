@@ -1,23 +1,25 @@
 .service {
     background: #1F2126;
     border-radius: 10px;
-    margin-bottom: 4.4rem;
+    margin-bottom: 3.4rem;
 
     &__wrapper {
-        padding: 3.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 4.1rem;
     }
 
     &__header {
         position: relative;
         padding-right: 7rem;
+        margin-bottom: 2.6rem;
         border-bottom: 1px solid #353941;
     }
 
     &__more {
         position: absolute;
 
-        top: 0; 
-        right: 0;
+        top: 0.5rem;
+        right: 1.6rem;
 
         content: '';
         width: 5.7rem;

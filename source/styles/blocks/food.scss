@@ -6,6 +6,8 @@
         
         border-top: 1px solid $color-lightgrey;
         border-bottom: 1px solid $color-brd-lightgrey;
+        padding-top: 2.2rem;
+        padding-bottom: 1.4rem;
     }
     &__title {
         max-width: 19rem;
@@ -14,6 +16,7 @@
 
     &__list {
         display: flex;
+        margin-bottom: 1.7rem;
     }
 
     &__card {
@@ -37,6 +40,7 @@
         height: 4rem;
         color: $color-blue;
         margin-left: auto;
+        padding-right: 1.5rem;
 
         span {
             margin-right: 1rem;

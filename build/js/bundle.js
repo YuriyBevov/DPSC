@@ -12313,22 +12313,18 @@ const sliderDelay = 3000;
 const foodModal = document.querySelector('.foodModal');
 const foodModalOpenBtn = document.querySelector('.js-food-modal-opener');
 const foodModalCloseBtn = document.querySelector('.js-food-modal-close-btn');
-const body = document.querySelector('html')
 
 const onClickOpenFoodModal = () => {
     foodModal.classList.add('opened');
     foodModalOpenBtn.removeEventListener('click', onClickOpenFoodModal);
-    //body.style.overflowY = 'hidden'
 }
 
 const onClickCloseFoodModal = () => {
     foodModal.classList.remove('opened');
     foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
-    // body.style.overflowY = 'scroll'
 }
 
 foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
-
 foodModalCloseBtn.addEventListener('click', onClickCloseFoodModal);
 
 const showBtn = document.querySelectorAll('.js-show-food-menu-btn')
@@ -12371,7 +12367,7 @@ showBtn.forEach(btn => {
 const menu = document.querySelector('.menu');
 const menuOpenBtns = document.querySelectorAll('.js-menu-opener');
 const menuCloseBtn = document.querySelector('.js-menu-close-btn');
-const body = document.querySelector('html')
+// const body = document.querySelector('html')
 
 const onClickOpenMenu = () => {
     menu.classList.add('opened');

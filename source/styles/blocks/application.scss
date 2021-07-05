@@ -1,10 +1,14 @@
 .application {
+    &__wrapper {
+        padding-bottom: 0;
+    }
+
     &__title {
         margin-bottom: 2.1rem;
     }
 
     picture {
-        margin-bottom: 2.2rem;
+        margin-bottom: 1.5rem;
     }
 
     &__desc {
@@ -19,7 +23,7 @@
             font-size: 1.6rem;
             line-height: 1.9rem;
             padding: 1.6rem 2.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             border: 1px solid #ECEFF6;
             border-radius: 8px;
             color: $color-black;

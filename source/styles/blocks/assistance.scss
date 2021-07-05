@@ -13,14 +13,21 @@
         display: flex;
         background: $color-lightgrey;
         padding: 1rem;
+        padding-right: 1.6rem;
         margin-bottom: 1.2rem;
         border: 1px solid $color-brd-lightgrey;
         border-radius: 8px;
+        min-height: 10.2rem;
 
         &-avatar {
             display: flex;
             flex-direction: column;
             margin-right: 1.5rem;
+
+            picture {
+                height: 4.1rem;
+                margin-bottom: 0.7rem;
+            }
 
             img {
                 width: 4.1rem;
@@ -48,6 +55,7 @@
             h3 {
                 font-size: 1.8rem;
                 line-height: 2.1rem;
+                margin-bottom: 0.7rem;
         
                 color: $color-black;
             }
