@@ -52,6 +52,10 @@
         span {
             margin-right: 1rem;
         }
+
+        @media(max-width: 340px) {
+            width: 13rem;
+        }
     }
 
     &__logo {
