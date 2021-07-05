@@ -10,13 +10,13 @@ const body = document.querySelector('html')
 const onClickOpenFoodModal = () => {
     foodModal.classList.add('opened');
     foodModalOpenBtn.removeEventListener('click', onClickOpenFoodModal);
-    body.style.overflowY = 'hidden'
+    //body.style.overflowY = 'hidden'
 }
 
 const onClickCloseFoodModal = () => {
     foodModal.classList.remove('opened');
     foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
-    body.style.overflowY = 'scroll'
+    // body.style.overflowY = 'scroll'
 }
 
 foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
@@ -32,11 +32,9 @@ const onShowBtnClick = (evt) => {
     if(menu.classList.contains('opened')) {
         menu.classList.remove('opened')
         btn.classList.add('closed')
-        // console.log(showBtn)
     } else {
         menu.classList.add('opened')
         btn.classList.remove('closed')
-        //console.log(showBtn)
 
         new Swiper(menu, {
                 slidesPerView: 'auto',

@@ -10,7 +10,7 @@ const onClickOpenMenu = () => {
         btn.removeEventListener('click', onClickOpenMenu);
     });
 
-    body.style.overflowY = 'hidden'
+    // body.style.overflowY = 'hidden'
 }
 
 const onClickCloseMenu = () => {
@@ -20,7 +20,7 @@ const onClickCloseMenu = () => {
         btn.addEventListener('click', onClickOpenMenu);
     });
 
-    body.style.overflowY = 'scroll'
+    // body.style.overflowY = 'scroll'
 }
 
 menuOpenBtns.forEach(btn => {
