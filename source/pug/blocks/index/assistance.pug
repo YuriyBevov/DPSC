@@ -1,3 +1,9 @@
+mixin phoneBtn(phone)
+  a.cmn__phoneBtn(href=phone) 
+    svg(width="25" height="25")
+      use(xlink:href="#icon-phone")
+    span Вызов
+
 section.assistance.cmn
   .cmn__wrapper
     h2.cmn__title.assistance__title Оперативная помощь
@@ -6,7 +12,7 @@ section.assistance.cmn
     ul.assistance__list
       -
         const cards = [
-          {title: 'Завести авто', desc: 'Прикурить, заправить, починить. Заводим в 100% случаев.', url: './assets/img/card1'},
+          {title: 'Завести авто', desc: 'Прикурить, заправить, починить. Заводим в 100% случаев.', url: './assets/img/card1', phone:'tel: +79213271197'},
           {title: 'Шиномонтаж выезд', desc: 'Смена шин, ремонт колёс, тормозов, боковых порезов на дороге.', url: './assets/img/card2'},
           {title: 'Автоэлектрик ', desc: 'Открыть машину без ключей. Разблочить сигнализацию.', url: './assets/img/card3'},
           {title: 'Эвакуатор', desc: 'Заказать эвакуатор или буксировку', url: './assets/img/card4'},
@@ -28,7 +34,8 @@ section.assistance.cmn
             h3= card.title
             p= card.desc
           .assistance__card-link-box
-            include ../../components/phoneBtn.pug
+            //include ../../components/phoneBtn.pug
+            +phoneBtn(card.phone)
 
       li.assistance__card.assistance__card--cleaning
         .assistance__card-avatar  

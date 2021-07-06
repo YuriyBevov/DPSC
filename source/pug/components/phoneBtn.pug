@@ -1,4 +1,5 @@
-a.cmn__phoneBtn(href="tel: +71234567890") 
+mixin phoneBtn(phone)
+  a.cmn__phoneBtn(href=phone) 
   svg(width="25" height="25")
     use(xlink:href="#icon-phone")
   span Вызов
