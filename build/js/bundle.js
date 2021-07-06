@@ -12270,7 +12270,7 @@ __webpack_require__.r(__webpack_exports__);
 
 console.log('zoom')
 document.addEventListener('touchmove', function (evt) {
-    if (evt.scale !== 1) { evt.preventDefault(); }
+    if (evt.scale !== 1) { evt.scale = 1 }
 }, { passive: false });
 
 /***/ }),
