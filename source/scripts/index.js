@@ -5,4 +5,3 @@ import accident from './modules/accident.js'
 import menu from './modules/menu.js'
 import food from './modules/food.js'
 import wash from './modules/wash.js'
-console.log('test')
