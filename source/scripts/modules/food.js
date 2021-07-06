@@ -25,12 +25,15 @@ const onShowBtnClick = (evt) => {
     const menu = evt.target.closest('.foodModal__item').querySelector('.foodModal-swiper-container')
 
     const btn = evt.target.closest('.foodModal__item').querySelector('.js-show-food-menu-btn')
+    const btnText = btn.querySelector('span')
     if(menu.classList.contains('opened')) {
         menu.classList.remove('opened')
         btn.classList.add('closed')
+        btnText.innerHTML = 'Развернуть меню'
     } else {
         menu.classList.add('opened')
         btn.classList.remove('closed')
+        btnText.innerHTML = 'Свернуть меню'
 
         new Swiper(menu, {
                 slidesPerView: 'auto',

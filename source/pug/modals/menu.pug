@@ -9,27 +9,90 @@
     ul.menu__list
         -
           const items = [
-            {text: 'Завести машину', iconName: '#icon-menu1'},
-            {text: 'Выездной шиномонтаж', iconName: '#icon-menu2'},
-            {text: 'Эвакуатор или буксировка', iconName: '#icon-menu3'},
-            {text: 'Мойка ', iconName: '#icon-menu4'},
-            {text: 'Автоэлектрик', iconName: '#icon-menu5'},
-            {text: 'Открыть машину', iconName: '#icon-menu6'},
-            {text: 'Батарейка от пульта', iconName: '#icon-menu7'},
-            {text: 'Кончился бенз', iconName: '#icon-menu8'},
-            {text: 'Подперли', iconName: '#icon-menu9'},
-            {text: 'Проголодался? Пожрать', iconName: '#icon-menu10'},
-            {text: 'Въебались? Аварийный.', iconName: '#icon-menu11'},
-            {text: 'Инструкция по оформлению ДТП', iconName: '#icon-menu12'},
-            {text: 'Сел акум?', iconName: '#icon-menu13'},
+            /* {text: 'Завести машину', icon: '#icon-menu1'},
+            {text: 'Выездной шиномонтаж', icon: '#icon-menu2'},
+            {text: 'Эвакуатор или буксировка', icon: '#icon-menu3'},
+            {text: 'Мойка ', icon: '#icon-menu4'},
+            {text: 'Автоэлектрик', icon: '#icon-menu5'},
+            {text: 'Открыть машину', icon: '#icon-menu6'},
+            {text: 'Батарейка от пульта', icon: '#icon-menu7'},
+            {text: 'Кончился бенз', icon: '#icon-menu8'},
+            {text: 'Подперли', icon: '#icon-menu9'},
+            {text: 'Проголодался? Пожрать', icon: '#icon-menu10'},
+            {text: 'Въебались? Аварийный.', icon: '#icon-menu11'},
+            {text: 'Инструкция по оформлению ДТП', icon: '#icon-menu12'},
+            {text: 'Сел акум?', icon: '#icon-menu13'}, */
+
+            // А
+            {text: 'Автоподбор', avatar: 'А', color: '#F5F8FF;'},
+            {text: 'Автопрокат', avatar: '', color: '#F5F8FF;'},
+            {text: 'Автоэлектрик ', avatar: '', color: '#F5F8FF;'},
+            {text: 'Автокредит', avatar: '', color: '#F5F8FF;'},
+            {text: 'Автосигнализация', avatar: '', color: '#F5F8FF;'},
+            {text: 'Автомойка', avatar: '', color: '#F5F8FF;'},
+            {text: 'Аварийный комиссар', avatar: '', color: '#F5F8FF;'},
+            {text: 'Автозвук', avatar: '', color: '#F5F8FF;'},
+            {text: 'Автошколы', avatar: '', color: '#F5F8FF;'},
+
+            //В
+            {text: 'Выкуп  ', avatar: 'В', color: '#E9FDF8;'},
+            //Г
+            {text: 'Госзнаки  ', avatar: 'Г', color: '#F6F5FF;'},
+            //Д
+            {text: 'Детейлинг  ', avatar: 'Д', color: '#F5F5F5;'},
+            {text: 'Диагностика  ', avatar: '', color: '#F5F5F5;'},
+            {text: 'Диски ремонт продажа  ', avatar: '', color: '#F5F5F5;'},
+            //З
+            {text: 'Замена масла', avatar: 'З', color: '#EAFAFF;'},
+            {text: 'Замена лобовых ', avatar: '', color: '#EAFAFF;'},
+            {text: 'Заправка кондиционера', avatar: '', color: '#EAFAFF;'},
+            {text: 'Замена колодок', avatar: '', color: '#EAFAFF;'},
+            //К
+            {text: 'Ключи прописка', avatar: 'К', color: '#FFF1F5;'},
+            //М
+            {text: 'Меню всех питстопов, инфа об очереди на питстопе', avatar: 'М', color: '#FFF3ED;'},
+            //О
+            {text: 'Открытие авто', avatar: 'О', color: '#F5F8FF;'},
+            {text: 'Облейка плёнкой', avatar: '', color: '#F5F8FF;'},
+            //П
+            {text: 'Перетяжка руля салона', avatar: 'П', color: '#E9FDF8;'},
+            {text: 'Помощь на дороге', avatar: '', color: '#E9FDF8;'},
+            {text: 'Покраска авто', avatar: '', color: '#E9FDF8;'},
+            //Р
+            {text: 'Ремонт глушителей', avatar: 'Р', color: '#F6F5FF;'},
+            {text: 'Развал схождение', avatar: '', color: '#F6F5FF;'},
+            {text: 'Ремонт стоек', avatar: '', color: '#F6F5FF;'},
+            {text: 'Ремонт кузова', avatar: '', color: '#F6F5FF;'},
+            {text: 'Ремонт двс', avatar: '', color: '#F6F5FF;'},
+            {text: 'Резина, колёса', avatar: '', color: '#F6F5FF;'},
+            {text: 'Ремонт ходовки', avatar: '', color: '#F6F5FF;'},
+            //С
+            {text: 'Страхование', avatar: 'С', color: '#F5F5F5;'},
+            {text: 'Сварщик', avatar: '', color: '#F5F5F5;'},
+            //Т
+            {text: 'Тонировка', avatar: 'Т', color: '#EAFAFF;'},
+            {text: 'Тюнинг фар', avatar: '', color: '#EAFAFF;'},
+            {text: 'Триплекс автостекла', avatar: '', color: '#EAFAFF;'},
+            //Х
+            {text: 'Химчистка', avatar: 'Х', color: '#FFF1F5'},
+            //Ч
+            {text: 'Чиптюнинг двигателя', avatar: 'Ч', color: '#FFF3ED;'},
+            {text: 'Чек сканер', avatar: '', color: '#FFF3ED;'},
+            //Ш
+            {text: 'Шумоизоляция', avatar: 'Ш', color: '#F5F8FF;'},
+            {text: 'Шиномонтаж', avatar: '', color: '#F5F8FF;'},
+            {text: 'Шильдики', avatar: '', color: '#F5F8FF;'},
+            //Э
+            {text: 'Эвакуаторы', avatar: 'Э', color: '#E9FDF8;'},
           ];
 
         each item in items
           li.menu__item
             a(href="#").menu__link
-              .menu__item-icon
-                svg(width="34" height="17")
-                  use(xlink:href= item.iconName)
+              .menu__item-icon(style="background-color:" + item.color)
+                span= item.avatar 
+                // svg(width="34" height="17")
+                  // use(xlink:href= item.icon)
               p.menu__item-desc= item.text
               svg(width="10" height="16").menu__item-arr
                 use(xlink:href="#icon-menu-arr")
