@@ -46,11 +46,16 @@
 .menu {
     &__wrapper {
         padding-bottom: 0;
+        padding-top: 0;
     }
 
     &__header {
         display: flex;
-        margin-bottom: 2.7rem;
+        padding-bottom: 2.7rem;
+        padding-top: 2.7rem;
+        position: sticky;
+        top: 0;
+        background-color: $color-white;
 
         b {
             font-family: $font_bold;
