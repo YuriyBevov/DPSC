@@ -12268,10 +12268,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-console.log('zoom3')
+/* console.log('zoom3')
 document.addEventListener('touchmove', function (evt) {
     if (evt.scale !== 1) { evt.scale = 1 }
-}, { passive: true }); 
+}, { passive: true });*/ 
 
 /***/ }),
 
