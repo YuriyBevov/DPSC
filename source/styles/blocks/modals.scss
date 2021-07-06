@@ -312,3 +312,61 @@
         }
     }
 }
+
+.addCompanyModal {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        overflow-x: hidden;
+        padding-top: 1.2rem;
+    }
+
+    &.opened {
+        display: flex;
+    }
+
+    &__content {
+        margin: auto 0;
+        padding-top: 0.5rem;
+
+        b {
+            font-family: $font_bold;
+            font-weight: 600;
+            display: block;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            margin-bottom: 1.2rem;
+
+            color: $color-black;
+        }
+
+        p {
+            font-size: 1.7rem;
+            line-height: 2rem;
+            margin-bottom: 3.6rem;
+
+            color: #363C4A;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1rem;
+        padding-bottom: 1.2rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        border: 1px solid $color-blue;
+        border-radius: 8px;
+        color: $color-blue;
+
+        svg {
+            margin-right: 1.3rem;
+            fill: $color-blue;
+        }
+    }
+}
