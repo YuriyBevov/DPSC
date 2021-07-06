@@ -47,6 +47,8 @@
         margin-bottom: 2.7rem;
 
         b {
+            font-family: $font_bold;
+            font-weight: 600;
             display: block; 
             font-size: 1.8rem;
             line-height: 2.1rem;
@@ -243,6 +245,7 @@
         flex-direction: column;
         padding-bottom: 0;
         overflow-x: hidden;
+        padding-top: 1.2rem;
     }
 
     &.opened {
@@ -251,7 +254,11 @@
 
     &__content {
         margin: auto 0;
+        padding-top: 0.5rem;
+
         b {
+            font-family: $font_bold;
+            font-weight: 600;
             display: block;
             font-weight: 600;
             font-size: 2rem;
@@ -275,7 +282,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 1.5rem;
+        padding: 1rem;
         font-size: 1.6rem;
         line-height: 1.9rem;
         border: 1px solid $color-blue;
