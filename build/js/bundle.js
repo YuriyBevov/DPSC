@@ -12255,8 +12255,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
 /* harmony import */ var _modules_accident_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accident.js */ "./source/scripts/modules/accident.js");
 /* harmony import */ var _modules_accident_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_accident_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_menuNew_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menuNew.js */ "./source/scripts/modules/menuNew.js");
+/* harmony import */ var _modules_menuNew_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_menuNew_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_food_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/food.js */ "./source/scripts/modules/food.js");
 /* harmony import */ var _modules_wash_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/wash.js */ "./source/scripts/modules/wash.js");
 /* harmony import */ var _modules_wash_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_wash_js__WEBPACK_IMPORTED_MODULE_4__);
@@ -12363,81 +12363,73 @@ showBtn.forEach(btn => {
 
 /***/ }),
 
-/***/ "./source/scripts/modules/menu.js":
-/*!****************************************!*\
-  !*** ./source/scripts/modules/menu.js ***!
-  \****************************************/
+/***/ "./source/scripts/modules/menuNew.js":
+/*!*******************************************!*\
+  !*** ./source/scripts/modules/menuNew.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-const openerBtns = document.querySelectorAll('.js-menu-opener');
-const menuModal = document.querySelector('.menuModal');
-const addCompanyModal = document.querySelector('.addCompanyModal');
-const addCompanyModalCloseBtn = addCompanyModal.querySelector('.js-addCompany-modal-close-btn');
-const menuModalItems = menuModal.querySelectorAll('.menuModal__item');
-const menuModalCloseBtn = menuModal.querySelector('.js-menuModal-close-btn');
+console.log('menuNew')
+const menu = document.querySelector('.menuModal');
+const menuOpenBtns = document.querySelectorAll('.js-menu-opener');
+const menuCloseBtn = document.querySelector('.js-menuModal-close-btn');
 
-const onClickOpenMenu = () => { 
-    menuModal.classList.add('opened')
+const menuItems = menu.querySelectorAll('.menuModal__link');
+const addCompanyModal = document.querySelector('.addCompanyModal')
+const addCompanyCloseBtn = addCompanyModal.querySelector('.js-addCompany-modal-close-btn');
 
-    const onMenuItemClickOpenAddCompanyModal = () => {
-        console.log('addc')
+const onClickOpenMenu = () => {
+    console.log('openmenu')
+    menu.classList.add('opened');
+
+    const onMenuItemClickHandler = (evt) => {
         addCompanyModal.classList.add('opened')
 
+        menuItems.forEach(item => {
+            console.log('menuItems remove evt')
+            item.removeEventListener('click', onMenuItemClickHandler);
+        })
 
-        /* menuModalItems.forEach(item => {
-            
-            item.removeEventListener('click', onMenuItemClickOpenAddCompanyModal)
-        }) */
-
-        const onAddCompanyModalCloseBtnClick = () => {
-            console.log('onAddCompanyModalCloseBtnClick')
+        const onClickCloseAddCompanyModal = () => {
             addCompanyModal.classList.remove('opened')
-            addCompanyModalCloseBtn.removeEventListener('click', onAddCompanyModalCloseBtnClick)
 
-            /* menuModalItems.forEach(item => {
-                console.log('menuModalItems remove event')
-                item.addEventListener('click', onMenuItemClickOpenAddCompanyModal)
-            }) */
+            menuItems.forEach(item => {
+                console.log('menuItems add evt')
+                item.addEventListener('click', onMenuItemClickHandler);
+            })
+
+            addCompanyCloseBtn.removeEventListener('click', onClickCloseAddCompanyModal)
         }
 
-        addCompanyModalCloseBtn.addEventListener('click', onAddCompanyModalCloseBtnClick)
+        addCompanyCloseBtn.addEventListener('click', onClickCloseAddCompanyModal)
     }
 
-    menuModalItems.forEach(item => {
-        console.log('menuModalItems add event')
-        item.addEventListener('click', onMenuItemClickOpenAddCompanyModal)
+    menuItems.forEach(item => {
+        console.log('menuItems add evt')
+        item.addEventListener('click', onMenuItemClickHandler);
     })
 
-    openerBtns.forEach(btn => {
-        console.log('openerBtns remove event')
-        btn.removeEventListener('click', onClickOpenMenu)
-    })
-
-    
-
-    const onClickCloseMenuModal = () => {
-        console.log('onClickCloseMenuModal')
-        menuModal.classList.remove('opened')
-        menuModalCloseBtn.removeEventListener('click', onClickCloseMenuModal)
-
-        openerBtns.forEach(btn => {
-            btn.addEventListener('click', onClickOpenMenu)
-        })
-
-        menuModalItems.forEach(item => {
-            console.log('menuModalItems remove event')
-            item.removeEventListener('click', onMenuItemClickOpenAddCompanyModal)
-        })
-    }
-
-    menuModalCloseBtn.addEventListener('click', onClickCloseMenuModal)
+    menuOpenBtns.forEach(btn => {
+        btn.removeEventListener('click', onClickOpenMenu);
+    });
 }
 
-openerBtns.forEach(btn => {
-    console.log('openerBtns add event', btn)
-    btn.addEventListener('click', onClickOpenMenu)
-})
+const onClickCloseMenu = () => {
+    menu.classList.remove('opened');
+
+    menuOpenBtns.forEach(btn => {
+        btn.addEventListener('click', onClickOpenMenu);
+    });
+}
+
+menuOpenBtns.forEach(btn => {
+    btn.addEventListener('click', onClickOpenMenu);
+});
+
+menuCloseBtn.addEventListener('click', onClickCloseMenu);
+
+
 
 /***/ }),
 
