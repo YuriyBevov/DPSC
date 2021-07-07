@@ -12387,8 +12387,34 @@ const menuModalCloseBtn = menuModal.querySelector('.js-menuModal-close-btn');
     //e.preventDefault();    
   //});
 
+window.onhashchange = function() {
+        console.log('listener', window.location)
+        menuModal.classList.remove('opened')
+        menuModalCloseBtn.removeEventListener('click', onClickCloseMenuModal)
+        openerBtns.forEach(btn => {
+            btn.addEventListener('click', onClickOpenMenu)
+        })
+}
+
+const onClickCloseMenuModal = () => {
+    console.log('close')
+    menuModal.classList.remove('opened')
+    menuModalCloseBtn.removeEventListener('click', onClickCloseMenuModal)
+
+    openerBtns.forEach(btn => {
+        btn.addEventListener('click', onClickOpenMenu)
+    })
+
+    /*menuModalItems.forEach(item => {
+        item.removeEventListener('click', onMenuItemClickOpenAddCompanyModal)
+    })*/
+}
+
 const onClickOpenMenu = () => {
     menuModal.classList.add('opened')
+    //window.location.isMenuOpened = true
+    
+    console.log('function',window.location)
 
     /*const onMenuItemClickOpenAddCompanyModal = () => {
         addCompanyModal.classList.add('opened')
@@ -12408,19 +12434,6 @@ const onClickOpenMenu = () => {
     openerBtns.forEach(btn => {
         btn.removeEventListener('click', onClickOpenMenu)
     })
-
-    const onClickCloseMenuModal = () => {
-        menuModal.classList.remove('opened')
-        menuModalCloseBtn.removeEventListener('click', onClickCloseMenuModal)
-
-        openerBtns.forEach(btn => {
-            btn.addEventListener('click', onClickOpenMenu)
-        })
-
-        /*menuModalItems.forEach(item => {
-            item.removeEventListener('click', onMenuItemClickOpenAddCompanyModal)
-        })*/
-    }
 
     menuModalCloseBtn.addEventListener('click', onClickCloseMenuModal)
 }
