@@ -1,27 +1,14 @@
-.menu.modal
-  .modal__wrapper.menu__wrapper
-    .menu__header
+.menuModal.modal
+  .modal__wrapper.menuModal__wrapper
+    .menuModal__header
       b Выберите категорию:
-      button.menu__close.js-menu-close-btn
+      button.menuModal__close.js-menuModal-close-btn
         svg(width="24" height="24")
           use(xlink:href="#icon-close")
       
-    ul.menu__list
+    ul.menuModal__list
         -
           const items = [
-            /* {text: 'Завести машину', icon: '#icon-menu1'},
-            {text: 'Выездной шиномонтаж', icon: '#icon-menu2'},
-            {text: 'Эвакуатор или буксировка', icon: '#icon-menu3'},
-            {text: 'Мойка ', icon: '#icon-menu4'},
-            {text: 'Автоэлектрик', icon: '#icon-menu5'},
-            {text: 'Открыть машину', icon: '#icon-menu6'},
-            {text: 'Батарейка от пульта', icon: '#icon-menu7'},
-            {text: 'Кончился бенз', icon: '#icon-menu8'},
-            {text: 'Подперли', icon: '#icon-menu9'},
-            {text: 'Проголодался? Пожрать', icon: '#icon-menu10'},
-            {text: 'Въебались? Аварийный.', icon: '#icon-menu11'},
-            {text: 'Инструкция по оформлению ДТП', icon: '#icon-menu12'},
-            {text: 'Сел акум?', icon: '#icon-menu13'}, */
 
             // А
             {text: 'Автоподбор', avatar: 'А', color: '#F5F8FF;'},
@@ -87,14 +74,12 @@
           ];
 
         each item in items
-          li.menu__item
-            a(href="#").menu__link
-              .menu__item-icon(style="background-color:" + item.color)
-                span= item.avatar 
-                // svg(width="34" height="17")
-                  // use(xlink:href= item.icon)
-              p.menu__item-desc= item.text
-              svg(width="10" height="16").menu__item-arr
-                use(xlink:href="#icon-menu-arr")
+          li.menuModal__item
+            a(href="#").menuModal__link
+              .menuModal__item-icon(style="background-color:" + item.color)
+                span= item.avatar
+              p.menuModal__item-desc= item.text
+              svg(width="10" height="16").menuModal__item-arr
+                use(xlink:href="#icon-menuModal-arr")
     include ../components/modalFooter.pug
     

@@ -3,7 +3,10 @@
     .modalFooter__header
       a(href="index.html" aria-label="Обновить страницу").cmn__logo
         img(src='./assets/img/logo@1x.png' srcset='./assets/img/logo@2x.png 2x' alt='логотип' width="76" height="33")
-      include ../components/serviceBtn.pug
+      button.cmn__serviceBtn
+        span Все услуги
+        svg(width="7" height="10")
+          use(xlink:href="#icon-arr")
     .modalFooter__bottom
       img(src='./assets/img/copyrights@1x.png' srcset='./assets/img/copyrights@2x.png 2x' alt='все права защищены' width="44" height="15")
       
