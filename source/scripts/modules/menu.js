@@ -17,11 +17,14 @@ const menuModalCloseBtn = menuModal.querySelector('.js-menuModal-close-btn');
 
 window.onhashchange = function() {
         console.log('listener', window.location)
-        menuModal.classList.remove('opened')
-        menuModalCloseBtn.removeEventListener('click', onClickCloseMenuModal)
-        openerBtns.forEach(btn => {
-            btn.addEventListener('click', onClickOpenMenu)
-        })
+        if(window.location.hash !== '#menu') {
+            menuModal.classList.remove('opened')
+            menuModalCloseBtn.removeEventListener('click', onClickCloseMenuModal)
+            openerBtns.forEach(btn => {
+                btn.addEventListener('click', onClickOpenMenu)
+            })
+        }
+
 }
 
 const onClickCloseMenuModal = () => {
@@ -40,6 +43,7 @@ const onClickCloseMenuModal = () => {
 
 const onClickOpenMenu = () => {
     menuModal.classList.add('opened')
+    window.location.hash = 'menu'
     //window.location.isMenuOpened = true
     
     console.log('function',window.location)
