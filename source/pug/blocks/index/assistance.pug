@@ -1,5 +1,5 @@
-mixin phoneBtn(phone)
-  a.cmn__phoneBtn(href=phone) 
+mixin phoneBtn(phone, target)
+  a.cmn__phoneBtn(href=phone onclick=target) 
     svg(width="25" height="25")
       use(xlink:href="#icon-phone")
     span Вызов
@@ -12,13 +12,13 @@ section.assistance.cmn
     ul.assistance__list
       -
         const cards = [
-          {title: 'Завести авто', desc: 'Прикурить, заправить, починить. Заводим в 100% случаев.', url: './assets/img/card1', phone:'tel: +79502995656'},
-          {title: 'Шиномонтаж выезд', desc: 'Смена шин, ремонт колёс, тормозов, боковых порезов на дороге.', url: './assets/img/card2', phone:'tel: +79084404911'},
-          {title: 'Открыть машину', desc: 'Открыть машину без ключей. Разблочить сигнализацию.', url: './assets/img/card3', phone:'tel: +79244374700' },
-          {title: 'Эвакуатор', desc: 'Заказать эвакуатор или буксировку', url: './assets/img/card4', phone:'tel: +79146581033'},
-          {title: 'Автоэлектрик', desc: 'Решить проблемы с электрикой', url: './assets/img/card5', phone:'tel: +79024830059'},
-          {title: 'Сканер Check', desc: 'Выяснить, почему загореглась лампочка Check Engine', url: './assets/img/card6', phone:'tel: +79510001580'},
-          {title: 'Доставка акума', desc: 'Привезем новый аккумулятор', url: './assets/img/card7', phone:'tel: +74232918518'},
+          {title: 'Завести авто', desc: 'Прикурить, заправить, починить. Заводим в 100% случаев.', url: './assets/img/card1', phone:'tel: +79502995656', target: "ym(82655017,'reachGoal','call1'); return true;"},
+          {title: 'Шиномонтаж выезд', desc: 'Смена шин, ремонт колёс, тормозов, боковых порезов на дороге.', url: './assets/img/card2', phone:'tel: +79084404911', target: "ym(82655017,'reachGoal','call12'); return true;"},
+          {title: 'Открыть машину', desc: 'Открыть машину без ключей. Разблочить сигнализацию.', url: './assets/img/card3', phone:'tel: +79244374700', target: "ym(82655017,'reachGoal','call3'); return true;" },
+          {title: 'Эвакуатор', desc: 'Заказать эвакуатор или буксировку', url: './assets/img/card4', phone:'tel: +79146581033', target: "ym(82655017,'reachGoal','call4'); return true;"},
+          {title: 'Автоэлектрик', desc: 'Решить проблемы с электрикой', url: './assets/img/card5', phone:'tel: +79024830059', target: "ym(82655017,'reachGoal','call5'); return true;"},
+          {title: 'Сканер Check', desc: 'Выяснить, почему загореглась лампочка Check Engine', url: './assets/img/card6', phone:'tel: +79510001580', target: "ym(82655017,'reachGoal','call6'); return true;"},
+          {title: 'Доставка акума', desc: 'Привезем новый аккумулятор', url: './assets/img/card7', phone:'tel: +74232918518', target: "ym(82655017,'reachGoal','call7'); return true;"},
         ];
       each card in cards
         li.assistance__card
@@ -35,7 +35,7 @@ section.assistance.cmn
             p= card.desc
           .assistance__card-link-box
             //include ../../components/phoneBtn.pug
-            +phoneBtn(card.phone)
+            +phoneBtn(card.phone, card.target)
 
       li.assistance__card.assistance__card--cleaning
         .assistance__card-avatar  
