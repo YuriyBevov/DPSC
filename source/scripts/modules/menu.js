@@ -72,7 +72,7 @@ const onClickOpenMenu = () => {
                 item.addEventListener('click', onMenuItemClickHandler);
             })
 
-            addCompanyCloseBtn.removeEventListener('click', onClickCloseAddCompanyModal)
+            addCompanyCloseBtn.removeEventListener('click', onClickCloseAddCompanyModal);
             //addCompanyModal.removeEventListener('touchstart', handleTouchStart, false);
             //addCompanyModal.removeEventListener('touchmove', handleTouchMove, false);
         }

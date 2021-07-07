@@ -82,7 +82,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 3.1rem;
+            min-width: 3.1rem;
             height: 3.1rem;
             background: #F5F8FF;
             border-radius: 5px;
@@ -99,6 +99,7 @@
         }
 
         &-desc {
+            max-width: 26rem;
             font-size: 1.8rem;
             line-height: 2.1rem;
             color: $color-black;
