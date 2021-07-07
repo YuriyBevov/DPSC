@@ -7,7 +7,24 @@ const menuItems = menu.querySelectorAll('.menuModal__link');
 const addCompanyModal = document.querySelector('.addCompanyModal')
 const addCompanyCloseBtn = addCompanyModal.querySelector('.js-addCompany-modal-close-btn');
 
+
+document.querySelector('html').addEventListener("touchmove", (e) => {
+    console.log('prevent')
+    // is not near edge of view, exit
+    if (e.pageX > 10 && e.pageX < window.innerWidth - 10) return;
+    else {
+        console.log('else')
+    }
+
+    // prevent swipe to navigate back gesture
+    e.preventDefault();
+
+    
+  });
+
 const onClickOpenMenu = () => {
+
+
     console.log('openmenu')
     menu.classList.add('opened');
 

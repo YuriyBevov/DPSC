@@ -12255,8 +12255,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
 /* harmony import */ var _modules_accident_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accident.js */ "./source/scripts/modules/accident.js");
 /* harmony import */ var _modules_accident_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_accident_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_menuNew_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menuNew.js */ "./source/scripts/modules/menuNew.js");
-/* harmony import */ var _modules_menuNew_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_menuNew_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_food_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/food.js */ "./source/scripts/modules/food.js");
 /* harmony import */ var _modules_wash_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/wash.js */ "./source/scripts/modules/wash.js");
 /* harmony import */ var _modules_wash_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_wash_js__WEBPACK_IMPORTED_MODULE_4__);
@@ -12363,73 +12363,124 @@ showBtn.forEach(btn => {
 
 /***/ }),
 
-/***/ "./source/scripts/modules/menuNew.js":
-/*!*******************************************!*\
-  !*** ./source/scripts/modules/menuNew.js ***!
-  \*******************************************/
+/***/ "./source/scripts/modules/menu.js":
+/*!****************************************!*\
+  !*** ./source/scripts/modules/menu.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log('menuNew')
-const menu = document.querySelector('.menuModal');
-const menuOpenBtns = document.querySelectorAll('.js-menu-opener');
-const menuCloseBtn = document.querySelector('.js-menuModal-close-btn');
+const openerBtns = document.querySelectorAll('.js-menu-opener');
+const menuModal = document.querySelector('.menuModal');
+const addCompanyModal = document.querySelector('.addCompanyModal');
+const addCompanyModalCloseBtn = addCompanyModal.querySelector('.js-addCompany-modal-close-btn');
+const menuModalItems = menuModal.querySelectorAll('.menuModal__item');
+const menuModalCloseBtn = menuModal.querySelector('.js-menuModal-close-btn');
 
-const menuItems = menu.querySelectorAll('.menuModal__link');
-const addCompanyModal = document.querySelector('.addCompanyModal')
-const addCompanyCloseBtn = addCompanyModal.querySelector('.js-addCompany-modal-close-btn');
+
+addCompanyModal.addEventListener("touchmove", (e) => {
+
+    // is not near edge of view, exit
+    if (e.pageX > 10 && e.pageX < window.innerWidth - 10) return;
+
+    // prevent swipe to navigate back gesture
+    e.preventDefault();    
+  });
 
 const onClickOpenMenu = () => {
-    console.log('openmenu')
-    menu.classList.add('opened');
+    menuModal.classList.add('opened')
 
-    const onMenuItemClickHandler = (evt) => {
+    const onMenuItemClickOpenAddCompanyModal = () => {
         addCompanyModal.classList.add('opened')
 
-        menuItems.forEach(item => {
-            console.log('menuItems remove evt')
-            item.removeEventListener('click', onMenuItemClickHandler);
-        })
-
-        const onClickCloseAddCompanyModal = () => {
+        const onAddCompanyModalCloseBtnClick = () => {
             addCompanyModal.classList.remove('opened')
-
-            menuItems.forEach(item => {
-                console.log('menuItems add evt')
-                item.addEventListener('click', onMenuItemClickHandler);
-            })
-
-            addCompanyCloseBtn.removeEventListener('click', onClickCloseAddCompanyModal)
+            addCompanyModalCloseBtn.removeEventListener('click', onAddCompanyModalCloseBtnClick)
         }
 
-        addCompanyCloseBtn.addEventListener('click', onClickCloseAddCompanyModal)
+        addCompanyModalCloseBtn.addEventListener('click', onAddCompanyModalCloseBtnClick)
     }
 
-    menuItems.forEach(item => {
-        console.log('menuItems add evt')
-        item.addEventListener('click', onMenuItemClickHandler);
+    menuModalItems.forEach(item => {
+        item.addEventListener('click', onMenuItemClickOpenAddCompanyModal)
     })
 
-    menuOpenBtns.forEach(btn => {
-        btn.removeEventListener('click', onClickOpenMenu);
-    });
+    openerBtns.forEach(btn => {
+        btn.removeEventListener('click', onClickOpenMenu)
+    })
+
+    const onClickCloseMenuModal = () => {
+        menuModal.classList.remove('opened')
+        menuModalCloseBtn.removeEventListener('click', onClickCloseMenuModal)
+
+        openerBtns.forEach(btn => {
+            btn.addEventListener('click', onClickOpenMenu)
+        })
+
+        menuModalItems.forEach(item => {
+            item.removeEventListener('click', onMenuItemClickOpenAddCompanyModal)
+        })
+    }
+
+    menuModalCloseBtn.addEventListener('click', onClickCloseMenuModal)
 }
 
-const onClickCloseMenu = () => {
-    menu.classList.remove('opened');
+openerBtns.forEach(btn => {
+    btn.addEventListener('click', onClickOpenMenu)
+})
 
-    menuOpenBtns.forEach(btn => {
-        btn.addEventListener('click', onClickOpenMenu);
-    });
+// свайпы
+
+function swipes(elem) {
+    console.log('swipes')
+    document.addEventListener('touchstart', handleTouchStart, { passive: false });
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
+    var xDown = null;
+    var yDown = null;
+
+    function getTouches(evt) {
+        return evt.touches || // чистый API JS
+        evt.originalEvent.touches; // jQuery
+    }
+    
+    function handleTouchStart(evt) {
+        const firstTouch = getTouches(evt)[0];
+        xDown = firstTouch.clientX;
+        console.log(getTouches(evt)[0])
+        yDown = firstTouch.clientY;
+    };
+    
+    function handleTouchMove(evt) {
+        if ( ! xDown || ! yDown ) {
+            return;
+        }
+    
+        var xUp = evt.touches[0].clientX;
+        console.log(xUp, evt.touches[0])
+        var yUp = evt.touches[0].clientY;
+        
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+        
+        if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/* отлавливаем разницу в движении */
+            if ( xDiff > 0 ) {
+            /* swipe влево */
+            } else {
+                /* swipe вправо */
+
+            }
+        } else {
+            if ( yDiff > 0 ) {
+            /* swipe вверх */
+            } else {
+            /* swipe вниз */
+            }
+        }
+        /* свайп был, обнуляем координаты */
+        xDown = null;
+        yDown = null;
+    };
 }
-
-menuOpenBtns.forEach(btn => {
-    btn.addEventListener('click', onClickOpenMenu);
-});
-
-menuCloseBtn.addEventListener('click', onClickCloseMenu);
-
-
 
 /***/ }),
 

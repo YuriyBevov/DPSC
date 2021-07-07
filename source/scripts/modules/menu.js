@@ -5,7 +5,17 @@ const addCompanyModalCloseBtn = addCompanyModal.querySelector('.js-addCompany-mo
 const menuModalItems = menuModal.querySelectorAll('.menuModal__item');
 const menuModalCloseBtn = menuModal.querySelector('.js-menuModal-close-btn');
 
-const onClickOpenMenu = () => { 
+
+addCompanyModal.addEventListener("touchmove", (e) => {
+
+    // is not near edge of view, exit
+    if (e.pageX > 10 && e.pageX < window.innerWidth - 10) return;
+
+    // prevent swipe to navigate back gesture
+    e.preventDefault();    
+  });
+
+const onClickOpenMenu = () => {
     menuModal.classList.add('opened')
 
     const onMenuItemClickOpenAddCompanyModal = () => {
@@ -49,48 +59,53 @@ openerBtns.forEach(btn => {
 
 // свайпы
 
+function swipes(elem) {
+    console.log('swipes')
+    document.addEventListener('touchstart', handleTouchStart, { passive: false });
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
+    var xDown = null;
+    var yDown = null;
 
-document.addEventListener('touchstart', handleTouchStart, { passive: false });
-document.addEventListener('touchmove', handleTouchMove, { passive: false });
-var xDown = null;
-var yDown = null;
+    function getTouches(evt) {
+        return evt.touches || // чистый API JS
+        evt.originalEvent.touches; // jQuery
+    }
+    
+    function handleTouchStart(evt) {
+        const firstTouch = getTouches(evt)[0];
+        xDown = firstTouch.clientX;
+        console.log(getTouches(evt)[0])
+        yDown = firstTouch.clientY;
+    };
+    
+    function handleTouchMove(evt) {
+        if ( ! xDown || ! yDown ) {
+            return;
+        }
+    
+        var xUp = evt.touches[0].clientX;
+        console.log(xUp, evt.touches[0])
+        var yUp = evt.touches[0].clientY;
+        
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+        
+        if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/* отлавливаем разницу в движении */
+            if ( xDiff > 0 ) {
+            /* swipe влево */
+            } else {
+                /* swipe вправо */
 
-function getTouches(evt) {
-    return evt.touches || // чистый API JS
-    evt.originalEvent.touches; // jQuery
+            }
+        } else {
+            if ( yDiff > 0 ) {
+            /* swipe вверх */
+            } else {
+            /* swipe вниз */
+            }
+        }
+        /* свайп был, обнуляем координаты */
+        xDown = null;
+        yDown = null;
+    };
 }
- 
-function handleTouchStart(evt) {
-    const firstTouch = getTouches(evt)[0];
-    xDown = firstTouch.clientX;
-    yDown = firstTouch.clientY;
-};
- 
-function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
-        return;
-    }
- 
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-    
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-    
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/* отлавливаем разницу в движении */
-        if ( xDiff > 0 ) {
-        /* swipe влево */
-        } else {
-            /* swipe вправо */
-        }
-    } else {
-        if ( yDiff > 0 ) {
-        /* swipe вверх */
-        } else {
-        /* swipe вниз */
-        }
-    }
-    /* свайп был, обнуляем координаты */
-    xDown = null;
-    yDown = null;
-};
