@@ -1,24 +1,24 @@
 const openerBtns = document.querySelectorAll('.js-menu-opener');
 const menuModal = document.querySelector('.menuModal');
-const addCompanyModal = document.querySelector('.addCompanyModal');
-const addCompanyModalCloseBtn = addCompanyModal.querySelector('.js-addCompany-modal-close-btn');
+//const addCompanyModal = document.querySelector('.addCompanyModal');
+//const addCompanyModalCloseBtn = addCompanyModal.querySelector('.js-addCompany-modal-close-btn');
 const menuModalItems = menuModal.querySelectorAll('.menuModal__item');
 const menuModalCloseBtn = menuModal.querySelector('.js-menuModal-close-btn');
 
 
-addCompanyModal.addEventListener("touchmove", (e) => {
+//addCompanyModal.addEventListener("touchmove", (e) => {
 
     // is not near edge of view, exit
-    if (e.pageX > 10 && e.pageX < window.innerWidth - 10) return;
+    //if (e.pageX > 10 && e.pageX < window.innerWidth - 10) return;
 
     // prevent swipe to navigate back gesture
-    e.preventDefault();    
-  });
+    //e.preventDefault();    
+  //});
 
 const onClickOpenMenu = () => {
     menuModal.classList.add('opened')
 
-    const onMenuItemClickOpenAddCompanyModal = () => {
+    /*const onMenuItemClickOpenAddCompanyModal = () => {
         addCompanyModal.classList.add('opened')
 
         const onAddCompanyModalCloseBtnClick = () => {
@@ -27,11 +27,11 @@ const onClickOpenMenu = () => {
         }
 
         addCompanyModalCloseBtn.addEventListener('click', onAddCompanyModalCloseBtnClick)
-    }
+    } */
 
-    menuModalItems.forEach(item => {
+    /*menuModalItems.forEach(item => {
         item.addEventListener('click', onMenuItemClickOpenAddCompanyModal)
-    })
+    }) */
 
     openerBtns.forEach(btn => {
         btn.removeEventListener('click', onClickOpenMenu)
@@ -45,9 +45,9 @@ const onClickOpenMenu = () => {
             btn.addEventListener('click', onClickOpenMenu)
         })
 
-        menuModalItems.forEach(item => {
+        /*menuModalItems.forEach(item => {
             item.removeEventListener('click', onMenuItemClickOpenAddCompanyModal)
-        })
+        })*/
     }
 
     menuModalCloseBtn.addEventListener('click', onClickCloseMenuModal)
@@ -59,7 +59,7 @@ openerBtns.forEach(btn => {
 
 // свайпы
 
-function swipes(elem) {
+/*function swipes(elem) {
     console.log('swipes')
     document.addEventListener('touchstart', handleTouchStart, { passive: false });
     document.addEventListener('touchmove', handleTouchMove, { passive: false });
@@ -91,21 +91,21 @@ function swipes(elem) {
         var yDiff = yDown - yUp;
         
         if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/* отлавливаем разницу в движении */
-            if ( xDiff > 0 ) {
+            //if ( xDiff > 0 ) {
             /* swipe влево */
-            } else {
+            //} else {
                 /* swipe вправо */
 
-            }
-        } else {
-            if ( yDiff > 0 ) {
+            //}
+        //} else {
+           // if ( yDiff > 0 ) {
             /* swipe вверх */
-            } else {
+            //} else {
             /* swipe вниз */
-            }
-        }
+           // }
+        //}
         /* свайп был, обнуляем координаты */
-        xDown = null;
+        /*xDown = null;
         yDown = null;
-    };
-}
+    };*/
+//}
