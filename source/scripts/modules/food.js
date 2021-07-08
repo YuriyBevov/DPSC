@@ -3,20 +3,26 @@ import Swiper from 'swiper'
 const sliderDelay = 3000;
 
 const foodModal = document.querySelector('.foodModal');
-const foodModalOpenBtn = document.querySelector('.js-food-modal-opener');
+const foodModalOpenBtn = document.querySelectorAll('.js-food-modal-opener');
 const foodModalCloseBtn = document.querySelector('.js-food-modal-close-btn');
 
 const onClickOpenFoodModal = () => {
     foodModal.classList.add('opened');
-    foodModalOpenBtn.removeEventListener('click', onClickOpenFoodModal);
+    foodModalOpenBtn.forEach(btn => {
+        btn.removeEventListener('click', onClickOpenFoodModal);
+    })
 }
 
 const onClickCloseFoodModal = () => {
     foodModal.classList.remove('opened');
-    foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
+    foodModalOpenBtn.forEach(btn => {
+        btn.addEventListener('click', onClickOpenFoodModal);
+    })
 }
 
-foodModalOpenBtn.addEventListener('click', onClickOpenFoodModal);
+foodModalOpenBtn.forEach(btn => {
+    btn.addEventListener('click', onClickOpenFoodModal);
+})
 foodModalCloseBtn.addEventListener('click', onClickCloseFoodModal);
 
 const showBtn = document.querySelectorAll('.js-show-food-menu-btn')

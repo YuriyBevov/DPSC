@@ -11,7 +11,7 @@ section.food.cmn
         ];
       each card in food_card
         li.food__card
-          img(src=card.url + '@1x.png' srcset=card.url + '@2x.png 2x' alt=card.title)
+          img(src=card.url + '@1x.png' srcset=card.url + '@2x.png 2x' alt=card.title).js-food-modal-opener
     button.food__link.js-food-modal-opener
       span Меню всех питстопов 
       svg(width="10" height="12")
