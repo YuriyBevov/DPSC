@@ -159,26 +159,22 @@
         overflow-x: hidden;
         display: none;
 
+        .swiper-wrapper {
+            margin-bottom: 2.6rem;
+        }
+
         &.opened {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         margin-bottom: 2rem;
         .swiper-slide {
             width: 24.5rem !important;
-        }
+        } 
 
-        animation: showSlider 0.5s forwards;
-    }
-
-    @keyframes showSlider {
-        0% {
-          opacity: 0;
-        }
-      
-        100% {
-          opacity: 1;
-        }
+        animation: fadeIn 0.5s forwards;
     }
 
     &__close {
@@ -200,8 +196,6 @@
         }
     }
 
-
-
     &__item {
         display: flex;
         flex-direction: column;
@@ -212,6 +206,7 @@
 
         &-avatar {
             margin-right: 1.8rem;
+            min-width: 6.3rem;
 
             img {
                 width: 6.3rem;
@@ -240,6 +235,7 @@
                 margin-bottom: 2.5rem;
 
                 svg {
+                    stroke: $color-black;
                     margin-left: 1rem;
                     transform: rotate(90deg);
                     transition: transform $transition-rules;
@@ -254,6 +250,98 @@
         }
     }
 
+    &__info {
+        display: none;
+
+        &.js-food-info-opened {
+            display: block;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        &-btn {
+            border:0;
+            padding: 0;
+            background-color: transparent;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            margin-bottom: 2.4rem;
+
+            color: $color-blue;
+
+            svg {
+                transform: rotate(-90deg);
+                stroke: $color-blue;
+                margin-left: 0.9rem;
+            }
+
+            &.js-food-modal-info-btn-opened {
+                svg {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            
+            margin-bottom: 1.5rem;
+
+            address {
+                display: flex;
+                align-items: center;
+                font-style: normal;
+                margin-bottom: 0.8rem;
+
+                span {
+                    position: relative;
+                    font-size: 1.7rem;
+                    line-height: 2rem;
+    
+                    color: $color-black;
+                }
+
+                svg {
+                    margin-right: 1.2rem;
+                }
+            }
+
+            a {
+                font-size: 1.7rem;
+                line-height: 2rem;
+                padding-left: 2.6rem;
+
+                color: $color-blue;
+            }
+        }
+
+        &-main-phone {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 1.7rem;
+                line-height: 2rem;
+                padding-left: 2.6rem;
+                color: #2152c4;
+                margin-right: 0.6rem;
+            }
+
+            & a {
+                padding-left: 0;
+            }
+        }
+    }
+    
+    @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+      
+        100% {
+          opacity: 1;
+        }
+    }
 }
 
 .washModal {

@@ -36,7 +36,7 @@
     "webpack": "^5.38.1",
     "webpack-stream": "^5.2.1"
   },
-  "name": "NITI",
+  "name": "DPS Control",
   "version": "1.0.0",
   "description": "ДПС контроль",
   "main": "gulp.config.js",
@@ -47,9 +47,9 @@
   "author": "Yuriy Bevov <yuriybevov@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YuriyBevov/niti/issues"
+    "url": "https://github.com/YuriyBevov/DPSC/issues"
   },
-  "homepage": "https://github.com/YuriyBevov/niti#readme",
+  "homepage": "https://github.com/YuriyBevov/DPSC#readme",
   "dependencies": {
     "swiper": "^6.7.5"
   }

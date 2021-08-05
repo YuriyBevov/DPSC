@@ -12334,6 +12334,7 @@ const onClickCloseFoodModal = () => {
 foodModalOpenBtn.forEach(btn => {
     btn.addEventListener('click', onClickOpenFoodModal);
 })
+
 foodModalCloseBtn.addEventListener('click', onClickCloseFoodModal);
 
 const showBtn = document.querySelectorAll('.js-show-food-menu-btn')
@@ -12365,6 +12366,17 @@ const onShowBtnClick = (evt) => {
 
 showBtn.forEach(btn => {
     btn.addEventListener('click', onShowBtnClick)
+})
+
+//--- показ информации с адресом и телефонами ---//
+
+const foodInfoBtn = document.querySelectorAll('.js-show-cafe-info');
+
+foodInfoBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('js-food-modal-info-btn-opened')
+        btn.parentNode.querySelector('.foodModal__info').classList.toggle('js-food-info-opened');
+    });
 })
 
 /***/ }),

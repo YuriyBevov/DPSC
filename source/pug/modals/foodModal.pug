@@ -1,31 +1,150 @@
 -
   const cafes = [
-    {text: 'Бензо кафе', url: './assets/img/food5', menus: [
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-    ]},
-    {text: 'ОП!', url: './assets/img/food1', menus: [
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-    ]},
-    {text: 'DRAM', url: './assets/img/food2', menus: [
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-    ]},
-    {text: 'Еда и точка', url: './assets/img/food3', menus: [
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-    ]},
-    {text: 'Соль и перец', url: './assets/img/food4', menus: [
-      {url: './assets/img/menu1'},
-      {url: './assets/img/menu2'},
-    ]},
+    {
+      text: 'Бензо кафе', 
+      url: './assets/img/benzo/benzo-avatar',
+
+      menus: [
+        {url: './assets/img/benzo/1'},
+        {url: './assets/img/benzo/2'},
+        {url: './assets/img/benzo/3'},
+        {url: './assets/img/benzo/4'},
+        {url: './assets/img/benzo/5'},
+        {url: './assets/img/benzo/6'},
+        {url: './assets/img/benzo/7'},
+        {url: './assets/img/benzo/8'},
+        {url: './assets/img/benzo/9'},
+        {url: './assets/img/benzo/10'},
+        {url: './assets/img/benzo/11'},
+        {url: './assets/img/benzo/12'},
+        {url: './assets/img/benzo/13'},
+        {url: './assets/img/benzo/14'},
+        {url: './assets/img/benzo/15'},
+        {url: './assets/img/benzo/16'},
+        {url: './assets/img/benzo/17'},
+        {url: './assets/img/benzo/18'},
+        {url: './assets/img/benzo/19'},
+      ],
+
+      info: [
+        {phone: '+79940247727', address: 'Романовка, ул. Центральная,7'},
+        {phone: '+79089929339', address: 'ул. Некрасовская 50/52'},
+        {phone: '+79940247679', address: 'ул. Маковского, 35а'},
+        {phone: '+79502808706', address: 'ул. Тухачевского 66, ст. 2'},
+        {phone: '+79502808344', address: 'Фокино, ул. Госпитальная, 4'},
+        {phone: '+79024881312', address: 'Шкотово, ул. Зальпе, 101'},
+        {phone: '+79502890401', address: 'Пр-кт 100-летия Владивостоку, 156 г'}
+      ],
+
+      mainPhoneList: []
+    },
+
+    {
+      text: 'Еда и точка.', 
+      url: './assets/img/food/food-avatar',
+
+      menus: [
+        {url: './assets/img/food/1'},
+        {url: './assets/img/food/2'},
+        {url: './assets/img/food/3'},
+        {url: './assets/img/food/4'},
+        {url: './assets/img/food/5'},
+        {url: './assets/img/food/6'},
+        {url: './assets/img/food/7'},
+        {url: './assets/img/food/8'},
+        {url: './assets/img/food/9'},
+        {url: './assets/img/food/10'},
+        {url: './assets/img/food/11'},
+        {url: './assets/img/food/12'},
+        {url: './assets/img/food/13'},
+        {url: './assets/img/food/14'},
+        {url: './assets/img/food/15'},
+        {url: './assets/img/food/16'},
+      ],
+
+      info: [
+        {address: 'Адмирала Фокина, 19'},
+        {address: 'Станюковича, 57'},
+        {address: 'Крыгина, 15А'},
+        {address: 'Авраменко, 15'},
+        {address: 'Калинина, 230'},
+        {address: 'Толстого, 32А'},
+        {address: 'Деревенская, 141'},
+        {address: 'Бородинская (Дружба)'},
+        {address: 'Проспект 100-летия Владивостоку, 105А, ст7'},
+        {address: 'Снеговая, 2Б'},
+      ],
+
+      mainPhoneList: []
+    },
+
+    {
+      text: 'Кофемашина', 
+      url: './assets/img/coffee/coffee-avatar',
+
+      menus: [
+        {url: './assets/img/coffee/1'},
+        {url: './assets/img/coffee/2'},
+        {url: './assets/img/coffee/3'},
+        {url: './assets/img/coffee/4'},
+        {url: './assets/img/coffee/5'},
+        {url: './assets/img/coffee/6'},
+      ],
+
+      info: [
+        {address: 'Некрасовская, 38Б'},
+      ],
+
+      mainPhoneList: []
+    },
+
+    
+    {
+      text: 'DRAM', 
+      url: './assets/img/dram/dram-avatar',
+
+      menus: [
+        {url: './assets/img/dram/1'},
+        {url: './assets/img/dram/2'},
+        {url: './assets/img/dram/3'},
+        {url: './assets/img/dram/4'},
+        {url: './assets/img/dram/5'},
+        {url: './assets/img/dram/6'},
+        {url: './assets/img/dram/7'},
+        {url: './assets/img/dram/8'},
+      ],
+
+      info: [
+        {phone: '2-053-039', address: 'ул. Гоголя,30'},
+        {phone: '2-729-286', address: 'ул. Всеволода Сибирцева, 42а'},
+        {phone: '2-999-951', address: 'ул. Проспект 100-летия 156, ст2'},
+        {phone: '2-999-941', address: 'ул. Тобольская, 10, ст2'},
+        {phone: '2-999-956', address: 'ул. Всеволода Сибирцева, 59а'},
+        {address: 'ул. Нейбута, 86'}
+      ],
+
+      mainPhoneList: []
+    },
+
+    {
+      text: 'zazacafe', 
+      url: './assets/img/zazacafe/zazacafe-avatar',
+
+      menus: [
+        {url: './assets/img/zazacafe/1'},
+        {url: './assets/img/zazacafe/2'},
+        {url: './assets/img/zazacafe/3'}
+      ],
+
+      info: [
+        {address: 'ул. Красного знамени 104а, ст.6'},
+        {address: 'ул. Днепровская 100, ст.15'},
+        {address: 'ул. Калинина, 38'},
+        {address: 'ул. Камский переулок, 5, ст.2'},
+      ],
+
+      mainPhoneList: [{phone: '239-06-06'}]
+    },
   ];
 
 .foodModal.modal.cmn
@@ -55,6 +174,29 @@
               each menu in cafe.menus
                 .swiper-slide
                   img(src=menu.url + '@1x.jpg' srcset=menu.url + '@2x.jpg 2x' alt="меню")
+
+            button.js-show-cafe-info.foodModal__info-btn
+              span Список адресов и телефонов
+                svg(width="8" height="10")
+                  use(xlink:href="#icon-arr")
+            
+            ul.foodModal__info
+              each info in cafe.info
+                li.foodModal__info-item
+                  address
+                    svg(width="14" height="14")
+                      use(xlink:href="#icon-map")
+                    span= info.address
+
+                  a(href="tel:" + info.phone ? info.phone : null class= !infoPhone ? 'hidden' : null)= info.phone ? info.phone : null
+
+              li.foodModal__info-item
+                each phone in cafe.mainPhoneList
+                  .foodModal__info-main-phone
+                    <span>тел: </span>
+                    a(href="tel:" + phone.phone)= phone.phone
+                
+              
         
 
             
