@@ -175,26 +175,26 @@
                 .swiper-slide
                   img(src=menu.url + '@1x.jpg' srcset=menu.url + '@2x.jpg 2x' alt="меню")
 
-            button.js-show-cafe-info.foodModal__info-btn
-              span Список адресов и телефонов
-                svg(width="8" height="10")
-                  use(xlink:href="#icon-arr")
-            
-            ul.foodModal__info
-              each info in cafe.info
-                li.foodModal__info-item
-                  address
-                    svg(width="14" height="14")
-                      use(xlink:href="#icon-map")
-                    span= info.address
-
-                  a(href="tel:" + info.phone ? info.phone : null class= !infoPhone ? 'hidden' : null)= info.phone ? info.phone : null
-
+          button.js-show-cafe-info.foodModal__info-btn
+            span Список адресов и телефонов
+              svg(width="8" height="10")
+                use(xlink:href="#icon-arr")
+          
+          ul.foodModal__info
+            each info in cafe.info
               li.foodModal__info-item
-                each phone in cafe.mainPhoneList
-                  .foodModal__info-main-phone
-                    <span>тел: </span>
-                    a(href="tel:" + phone.phone)= phone.phone
+                address
+                  svg(width="14" height="14")
+                    use(xlink:href="#icon-map")
+                  span= info.address
+
+                a(href="tel:" + info.phone ? info.phone : null class= !infoPhone ? 'hidden' : null)= info.phone ? info.phone : null
+
+            li.foodModal__info-item
+              each phone in cafe.mainPhoneList
+                .foodModal__info-main-phone
+                  <span>тел: </span>
+                  a(href="tel:" + phone.phone)= phone.phone
                 
               
         

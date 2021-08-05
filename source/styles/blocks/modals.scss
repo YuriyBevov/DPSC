@@ -199,6 +199,7 @@
     &__item {
         display: flex;
         flex-direction: column;
+        margin-bottom: 2.5rem;
 
         &-header {
             display: flex;
@@ -237,13 +238,13 @@
                 svg {
                     stroke: $color-black;
                     margin-left: 1rem;
-                    transform: rotate(90deg);
+                    transform: rotate(-90deg);
                     transition: transform $transition-rules;
                 }
 
                 &.closed {
                     svg {
-                        transform: rotate(-90deg)
+                        transform: rotate(90deg)
                     }
                 }
             }
@@ -252,6 +253,7 @@
 
     &__info {
         display: none;
+        border-bottom: 1px solid #EDF1F8;
 
         &.js-food-info-opened {
             display: block;
@@ -260,23 +262,26 @@
 
         &-btn {
             border:0;
+            border-bottom: 1px solid #EDF1F8;
             padding: 0;
             background-color: transparent;
             font-size: 1.8rem;
             line-height: 2.1rem;
-            margin-bottom: 2.4rem;
+            padding-bottom: 2.4rem;
+            text-align: start;
 
             color: $color-blue;
 
             svg {
-                transform: rotate(-90deg);
+                transform: rotate(90deg);
                 stroke: $color-blue;
                 margin-left: 0.9rem;
             }
 
             &.js-food-modal-info-btn-opened {
+                border:0;
                 svg {
-                    transform: rotate(90deg);
+                    transform: rotate(-90deg);
                 }
             }
         }
