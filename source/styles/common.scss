@@ -53,6 +53,10 @@
             margin-right: 1rem;
         }
 
+        svg {
+            stroke: $color-black;
+        }
+
         @media(max-width: 340px) {
             width: 13rem;
         }

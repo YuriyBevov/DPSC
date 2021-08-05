@@ -188,7 +188,7 @@
                     use(xlink:href="#icon-map")
                   span= info.address
 
-                a(href="tel:" + info.phone ? info.phone : null class= !infoPhone ? 'hidden' : null)= info.phone ? info.phone : null
+                a(href="tel:" + info.phone ? info.phone : null class= !info.phone ? 'hidden' : null)= info.phone ? info.phone : null
 
             li.foodModal__info-item
               each phone in cafe.mainPhoneList
